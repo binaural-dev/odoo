@@ -1,5 +1,6 @@
-import json
 import logging
+
+from markupsafe import Markup
 from hashlib import sha256
 from base64 import b64decode, b64encode
 from lxml import etree
@@ -165,23 +166,27 @@ class AccountEdiFormat(models.Model):
         """
         clearance_data = invoice.journal_id._l10n_sa_api_clearance(invoice, signed_xml.decode(), PCSID_data)
         if clearance_data.get('json_errors'):
-            errors = [json.loads(j).get('validationResults', {}) for j in clearance_data['json_errors']]
+            error = clearance_data['json_errors']
             error_msg = ''
+            status_code = error.get('status_code')
+            if status_code:
+                error_msg = Markup("<b>[%s] </b>") % status_code
+
             is_warning = True
-            for error in errors:
-                validation_results = error.get('validationResults', {})
-                for err in validation_results.get('warningMessages', []):
-                    error_msg += '\n - %s | %s' % (err['code'], err['message'])
-                for err in validation_results.get('errorMessages', []):
-                    is_warning = False
-                    error_msg += '\n - %s | %s' % (err['code'], err['message'])
+            validation_results = error.get('validationResults', {})
+            for err in validation_results.get('warningMessages', []):
+                error_msg += Markup('<b>%s</b> : %s <br/>') % (err['code'], err['message'])
+            for err in validation_results.get('errorMessages', []):
+                is_warning = False
+                error_msg += Markup('<b>%s</b> : %s <br/>') % (err['code'], err['message'])
             return {
                 'error': error_msg,
                 'rejected': not is_warning,
                 'response': signed_xml.decode(),
-                'blocking_level': 'warning' if is_warning else 'error'
+                'blocking_level': 'warning' if is_warning else 'error',
+                'status_code': status_code,
             }
-        if not clearance_data.get('error'):
+        if not clearance_data.get('error') and clearance_data.get("status_code") != 409:
             return self._l10n_sa_assert_clearance_status(invoice, clearance_data)
         return clearance_data
 
@@ -348,8 +353,8 @@ class AccountEdiFormat(models.Model):
         if response_data.get('error'):
 
             # If the request was rejected, we save the signed xml content as an attachment
-            if response_data.get('rejected'):
-                invoice._l10n_sa_log_results(submitted_xml, response_data, error=True)
+            # If request timedout, just log note a warning message
+            invoice._l10n_sa_log_results(submitted_xml, response_data, error=response_data.get('rejected'))
 
             # If the request returned an exception (Timeout, ValueError... etc.) it means we're not sure if the
             # invoice was successfully cleared/reported, and thus we keep the Index Chain.
@@ -424,7 +429,7 @@ class AccountEdiFormat(models.Model):
         if not company._l10n_sa_check_organization_unit():
             errors.append(
                 _("- The company VAT identification must contain 15 digits, with the first and last digits being '3' as per the BR-KSA-39 and BR-KSA-40 of ZATCA KSA business rule."))
-        if not company.sudo().l10n_sa_private_key:
+        if not journal.company_id.sudo().l10n_sa_private_key:
             errors.append(
                 _("- No Private Key was generated for company %s. A Private Key is mandatory in order to generate Certificate Signing Requests (CSR).", company.name))
         if not journal.l10n_sa_serial_number:
@@ -490,7 +495,7 @@ class AccountEdiFormat(models.Model):
         if self.code != 'sa_zatca' or edi_document.move_id.country_code != 'SA':
             return
 
-        attachment = edi_document.attachment_id
+        attachment = edi_document.sudo().attachment_id
         if not attachment or not attachment.datas:
             _logger.warning(f"No attachment found for invoice {edi_document.move_id.name}")
             return

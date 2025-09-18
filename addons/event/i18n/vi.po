@@ -1943,7 +1943,7 @@ msgstr "Số lượng tệp đính kèm"
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.res_config_settings_view_form
 msgid "Attendance"
-msgstr "Chuyên cần"
+msgstr "Chấm công"
 
 #. module: event
 #: model:ir.model.fields.selection,name:event.selection__event_registration__state__done
@@ -2049,7 +2049,7 @@ msgstr "Giao diện mã vạch"
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.res_config_settings_view_form
 msgid "Barcode Nomenclature"
-msgstr "Phép đặt tên mã vạch"
+msgstr "Danh pháp mã vạch"
 
 #. module: event
 #: model:ir.model.constraint,message:event.constraint_event_registration_barcode_event_uniq
@@ -2441,7 +2441,7 @@ msgstr "Tên hiển thị"
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.res_config_settings_view_form
 msgid "Display Sponsors and Exhibitors on your event pages"
-msgstr "Trưng bày Nhà tài trợ và Đơn vị triển lãm trong trang sự kiện"
+msgstr "Hiển thị Nhà tài trợ và Đơn vị triển lãm trong trang sự kiện"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__date_tz
@@ -2897,8 +2897,8 @@ msgid ""
 "From this dashboard you can report, analyze and detect trends regarding your"
 " event registrations."
 msgstr ""
-"Từ trang chủ này, bạn có thể báo cáo, phân tích, phát hiện xu hướng của đăng"
-" ký sự kiện. "
+"Từ bảng điều khiển này, bạn có thể báo cáo, phân tích, phát hiện xu hướng "
+"của đăng ký sự kiện. "
 
 #. module: event
 #: model:ir.actions.report,name:event.action_report_event_registration_full_page_ticket
@@ -3439,7 +3439,7 @@ msgstr "Âm nhạc"
 #: model:ir.model.fields,field_description:event.field_event_event__my_activity_date_deadline
 #: model:ir.model.fields,field_description:event.field_event_registration__my_activity_date_deadline
 msgid "My Activity Deadline"
-msgstr "Hạn chót hoạt động của tôi"
+msgstr "Thời hạn hoạt động của tôi"
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_search
@@ -3473,7 +3473,7 @@ msgstr "Sự kiện theo lịch cho hoạt động tiếp theo"
 #: model:ir.model.fields,field_description:event.field_event_event__activity_date_deadline
 #: model:ir.model.fields,field_description:event.field_event_registration__activity_date_deadline
 msgid "Next Activity Deadline"
-msgstr "Hạn chót cho hoạt động tiếp theo"
+msgstr "Thời hạn cho hoạt động tiếp theo"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__activity_summary
@@ -3503,7 +3503,7 @@ msgstr "Chưa có người tham dự!"
 #. module: event
 #: model:ir.model.fields,field_description:event.field_res_config_settings__barcode_nomenclature_id
 msgid "Nomenclature"
-msgstr "Phép đặt tên"
+msgstr "Danh pháp"
 
 #. module: event
 #. odoo-python
@@ -3739,7 +3739,7 @@ msgstr "Vui lòng nhập bí mật base64 hợp lệ"
 #. module: event
 #: model_terms:event.event,description:event.event_2
 msgid "Point of Sale (POS), Introduction to report customization."
-msgstr "Điểm bán hàng (PoS), Giới thiệu về tuỳ biến báo cáo."
+msgstr "POS (PoS), Giới thiệu về tuỳ biến báo cáo."
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.event_registration_view_kanban

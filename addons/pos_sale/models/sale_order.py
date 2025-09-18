@@ -40,8 +40,8 @@ class SaleOrder(models.Model):
         for order in self:
             if order.invoice_status == 'invoiced':
                 continue
-            # We need to account for the downpayment paid in POS with and without invoice
-            order_amount = sum(order.pos_order_line_ids.filtered(lambda pol: pol.sale_order_line_id.is_downpayment).mapped('price_subtotal_incl'))
+            # We need to account for all amount paid in POS with and without invoice
+            order_amount = sum(order.pos_order_line_ids.mapped('price_subtotal_incl'))
             order.amount_to_invoice -= order_amount
 
 
@@ -76,6 +76,7 @@ class SaleOrderLine(models.Model):
                 item = sale_line.read(field_names)[0]
                 if sale_line.product_id.tracking != 'none':
                     item['lot_names'] = sale_line.move_ids.move_line_ids.lot_id.mapped('name')
+                    item['lot_qty_by_name'] = {line.lot_id.name: line.quantity for line in sale_line.move_ids.move_line_ids}
                 if product_uom == sale_line_uom:
                     results.append(item)
                     continue

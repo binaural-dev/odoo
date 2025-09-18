@@ -11,7 +11,7 @@ import { prettifyMessageContent } from "@mail/utils/common/format";
 import { useSelection } from "@mail/utils/common/hooks";
 import { isDragSourceExternalFile } from "@mail/utils/common/misc";
 import { isEventHandled, markEventHandled } from "@web/core/utils/misc";
-import { isMobileOS } from "@web/core/browser/feature_detection";
+import { isMobileOS, hasTouch } from "@web/core/browser/feature_detection";
 
 import {
     Component,
@@ -122,6 +122,7 @@ export class Composer extends Component {
         this.suggestion = this.store.user ? useSuggestion() : undefined;
         this.markEventHandled = markEventHandled;
         this.isMobileOS = isMobileOS;
+        this.hasTouch = hasTouch;
         this.onDropFile = this.onDropFile.bind(this);
         if (this.props.dropzoneRef) {
             useDropzone(
@@ -157,7 +158,15 @@ export class Composer extends Component {
         );
         useEffect(
             () => {
+                let wasEmpty = false;
+                if (!this.fakeTextarea.el.value) {
+                    wasEmpty = true;
+                    this.fakeTextarea.el.value = "0";
+                }
                 this.ref.el.style.height = this.fakeTextarea.el.scrollHeight + "px";
+                if (wasEmpty) {
+                    this.fakeTextarea.el.value = "";
+                }
             },
             () => [this.props.composer.textInputContent, this.ref.el]
         );
@@ -424,7 +433,7 @@ export class Composer extends Component {
                     ev.preventDefault();
                     return;
                 }
-                if (this.isMobileOS()) {
+                if (this.isMobileOS() || ev.isComposing) {
                     return;
                 }
                 const shouldPost = this.props.mode === "extended" ? ev.ctrlKey : !ev.shiftKey;

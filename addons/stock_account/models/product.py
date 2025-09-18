@@ -138,7 +138,9 @@ class ProductProduct(models.Model):
         for product in self:
             value_sum, quantity_sum = group_mapping.get(product._origin, (0, 0))
             value_svl = company_id.currency_id.round(value_sum)
-            avg_cost = value_svl / quantity_sum if quantity_sum else 0
+            avg_cost = 0
+            if not float_is_zero(quantity_sum, precision_rounding=product.uom_id.rounding):
+                avg_cost = value_svl / quantity_sum
             product.value_svl = value_svl
             product.quantity_svl = quantity_sum
             product.avg_cost = avg_cost
@@ -440,7 +442,7 @@ class ProductProduct(models.Model):
         new_svl_vals_manual = []
         real_time_svls_to_vacuum = ValuationLayer
 
-        for product in self:
+        for product in self.with_company(company.id):
             all_candidates = all_candidates_by_product[product.id]
             current_real_time_svls = ValuationLayer
             for svl_to_vacuum in svls_to_vacuum_by_product[product.id]:
@@ -792,16 +794,19 @@ class ProductProduct(models.Model):
         if not qty_to_invoice:
             return 0
 
-        candidates = stock_moves\
-            .sudo()\
-            .filtered(lambda m: is_returned == bool(m.origin_returned_move_id and sum(m.stock_valuation_layer_ids.mapped('quantity')) >= 0))\
-            .mapped('stock_valuation_layer_ids')
+        candidates = self.env['stock.valuation.layer'].sudo()
+        for move in stock_moves.sudo():
+            move_candidates = move._get_layer_candidates()
+            if is_returned != bool(move.origin_returned_move_id and sum(move_candidates.mapped('quantity')) >= 0):
+                continue
+            candidates |= move_candidates
 
         if self.env.context.get('candidates_prefetch_ids'):
             candidates = candidates.with_prefetch(self.env.context.get('candidates_prefetch_ids'))
 
         if len(candidates) > 1:
-            candidates = candidates.sorted(lambda svl: (svl.create_date, svl.id))
+            # sort candidates by create_date > existing records by id > new records without origin
+            candidates = candidates.sorted(lambda svl: (svl.create_date, not bool(svl.ids), svl.ids[0] if svl.ids else 0))
 
         value_invoiced = self.env.context.get('value_invoiced', 0)
         if 'value_invoiced' in self.env.context:

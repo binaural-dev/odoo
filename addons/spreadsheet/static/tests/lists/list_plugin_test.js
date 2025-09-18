@@ -8,19 +8,20 @@ import { CommandResult } from "@spreadsheet/o_spreadsheet/cancelled_reason";
 import { createModelWithDataSource, waitForDataSourcesLoaded } from "../utils/model";
 import { addGlobalFilter, selectCell, setCellContent } from "../utils/commands";
 import {
+    getBorders,
     getCell,
     getCellContent,
     getCellFormula,
     getCells,
     getCellValue,
     getEvaluatedCell,
-    getBorders,
 } from "../utils/getters";
 import { createSpreadsheetWithList } from "../utils/list";
 import { registry } from "@web/core/registry";
 import { getBasicServerData } from "../utils/data";
 
 import * as spreadsheet from "@odoo/o-spreadsheet";
+
 const { DEFAULT_LOCALE } = spreadsheet.constants;
 
 QUnit.module("spreadsheet > list plugin", {}, () => {

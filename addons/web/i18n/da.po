@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* web
-# 
+# * web
+#
 # Translators:
 # Lucas Holm, 2023
 # Morten Schou <ms@msteknik.dk>, 2023
@@ -15,23 +15,25 @@
 # Morten Paaske, 2024
 # Ejner Sønniksen <ejner@vkdata.dk>, 2024
 # Sammi Iversen <sammi@vkdata.dk>, 2024
-# Sanne Kristensen <sanne@vkdata.dk>, 2024
 # lhmflexerp <lhm@flexerp.dk>, 2025
 # Martin Trigaux, 2025
-# 
+# Sanne Kristensen <sanne@vkdata.dk>, 2025
+# Kira Petersen, 2025
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-10 10:35+0000\n"
-"PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Martin Trigaux, 2025\n"
-"Language-Team: Danish (https://app.transifex.com/odoo/teams/41243/da/)\n"
+"POT-Creation-Date: 2025-05-14 20:48+0000\n"
+"PO-Revision-Date: 2025-08-23 01:40+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
+"Language-Team: Danish <https://translate.odoo.com/projects/odoo-17/web/da/>\n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: da\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.12.2\n"
 
 #. module: web
 #. odoo-javascript
@@ -1133,6 +1135,13 @@ msgstr "Alle brugere"
 
 #. module: web
 #. odoo-javascript
+#: code:addons/web/static/src/views/fields/domain/domain_field.js:0
+#, python-format
+msgid "Allow expressions"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
 #: code:addons/web/static/src/core/colorlist/colorlist.js:0
 #, python-format
 msgid "Almond"
@@ -1409,7 +1418,7 @@ msgstr "Avatar"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "B button (blood type)"
-msgstr "B knap (blodtype)"
+msgstr "B-knap (blodtype)"
 
 #. module: web
 #. odoo-javascript
@@ -2086,8 +2095,8 @@ msgid ""
 "Control the number of minutes in the time selection. E.g. set it to 15 to "
 "work in quarters."
 msgstr ""
-"Styr antallet af minutter i tidsvalget. F.eks. sæt den til 15 for at fungere"
-" i kvartaler."
+"Angiv intervallet i minutter for tidsvalget. F.eks. kan du sætte det til 15 "
+"for at vælge tid i kvarter."
 
 #. module: web
 #. odoo-javascript
@@ -2953,6 +2962,13 @@ msgstr "Enterprise"
 
 #. module: web
 #. odoo-javascript
+#: code:addons/web/static/src/core/debug/profiling/profiling_item.xml:0
+#, python-format
+msgid "Entry Count"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
 #: code:addons/web/static/src/core/file_upload/file_upload_service.js:0
 #, python-format
 msgid "Error"
@@ -3491,7 +3507,7 @@ msgstr "Håndtér"
 #. module: web
 #: model:ir.model.fields,help:web.field_base_document_layout__company_details
 msgid "Header text displayed at the top of all reports."
-msgstr "Sidehoved tekst vist øverst på alle rapporter."
+msgstr "Teksten i sidehovedet vises øverst på alle rapporter."
 
 #. module: web
 #. odoo-javascript
@@ -3641,7 +3657,9 @@ msgstr ""
 #, python-format
 msgid ""
 "If checked, the record will be saved immediately when the field is modified."
-msgstr "Hvis markeret, gemmes posten med det samme, når feltet ændres."
+msgstr ""
+"Hvis denne indstilling er aktiveret, gemmes posten med det samme, når feltet "
+"ændres."
 
 #. module: web
 #. odoo-javascript
@@ -3680,6 +3698,13 @@ msgid ""
 msgstr ""
 "Hvis markeret, vil brugere slet ikke være i stand til at oprette poster via "
 "rullemenuen for autofuldførelse."
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/views/fields/domain/domain_field.js:0
+#, python-format
+msgid "If true, non-literals are accepted"
+msgstr ""
 
 #. module: web
 #. odoo-javascript
@@ -5119,6 +5144,7 @@ msgstr "Nej, behold det"
 
 #. module: web
 #. odoo-javascript
+#: code:addons/web/static/src/core/debug/profiling/profiling_item.xml:0
 #: code:addons/web/static/src/views/graph/graph_model.js:0
 #: code:addons/web/static/src/views/kanban/kanban_header.js:0
 #: code:addons/web/static/src/views/list/list_renderer.js:0
@@ -7199,6 +7225,20 @@ msgstr ""
 
 #. module: web
 #. odoo-javascript
+#: code:addons/web/static/src/views/fields/domain/domain_field.js:0
+#, python-format
+msgid "The domain involves non-literals. Their evaluation might fail."
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/views/fields/domain/domain_field.js:0
+#, python-format
+msgid "The domain should not involve non-literals"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
 #: code:addons/web/static/src/core/errors/error_dialogs.xml:0
 #: code:addons/web/static/src/public/error_notifications.js:0
 #, python-format
@@ -7720,7 +7760,7 @@ msgstr "Opdater til:"
 #: code:addons/web/static/src/webclient/settings_form_view/fields/upgrade_dialog.xml:0
 #, python-format
 msgid "Upgrade now"
-msgstr "Opgrader nu"
+msgstr "Opgradér nu"
 
 #. module: web
 #. odoo-javascript
@@ -8614,7 +8654,6 @@ msgstr ""
 
 #. module: web
 #. odoo-javascript
-#: code:addons/web/static/src/core/debug/debug_menu_items.xml:0
 #: code:addons/web/static/src/core/tree_editor/tree_editor.xml:0
 #: code:addons/web/static/src/core/tree_editor/tree_editor.xml:0
 #, python-format
@@ -10022,7 +10061,7 @@ msgstr ""
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "bill"
-msgstr ""
+msgstr "Faktura"
 
 #. module: web
 #. odoo-javascript
@@ -16351,7 +16390,7 @@ msgstr ""
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "floor"
-msgstr ""
+msgstr "rum"
 
 #. module: web
 #. odoo-javascript
@@ -18701,7 +18740,7 @@ msgstr ""
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "hotdog"
-msgstr ""
+msgstr "hotdog"
 
 #. module: web
 #. odoo-javascript
@@ -21375,7 +21414,7 @@ msgstr ""
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "man police officer"
-msgstr ""
+msgstr "mandlig politibetjent"
 
 #. module: web
 #. odoo-javascript
@@ -22926,7 +22965,7 @@ msgstr ""
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "net"
-msgstr ""
+msgstr "netto"
 
 #. module: web
 #. odoo-javascript
@@ -22963,13 +23002,6 @@ msgstr ""
 #: code:addons/web/static/src/core/commands/command_palette.xml:0
 #, python-format
 msgid "new tab"
-msgstr ""
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/views/view_dialogs/export_data_dialog.xml:0
-#, python-format
-msgid "new_template"
 msgstr ""
 
 #. module: web
@@ -23165,7 +23197,7 @@ msgstr ""
 #: code:addons/web/static/src/core/tree_editor/tree_editor.xml:0
 #, python-format
 msgid "none"
-msgstr ""
+msgstr "ingen"
 
 #. module: web
 #. odoo-javascript
@@ -27598,13 +27630,6 @@ msgstr "valgte"
 #, python-format
 msgid "selected records,"
 msgstr "valgte datasæt,"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/debug/debug_menu_items.xml:0
-#, python-format
-msgid "self"
-msgstr ""
 
 #. module: web
 #. odoo-javascript
@@ -33698,20 +33723,6 @@ msgstr ""
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "zombie"
-msgstr ""
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/views/view_components/column_progress.xml:0
-#, python-format
-msgid "{{ bar.count }} {{ bar.string }}"
-msgstr ""
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/views/kanban/kanban_column_quick_create.xml:0
-#, python-format
-msgid "{{ relatedFieldName }}..."
 msgstr ""
 
 #. module: web

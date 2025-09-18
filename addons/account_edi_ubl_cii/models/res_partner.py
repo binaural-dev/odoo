@@ -80,8 +80,12 @@ class ResPartner(models.Model):
             ('0213', "0213 - Finnish Organization Value Add Tax Identifier"),
             ('0215', "0215 - Net service ID"),
             ('0216', "0216 - OVTcode"),
+            ('0218', "0218 - Unified registration number (Latvia)"),
             ('0221', "0221 - The registered number of the qualified invoice issuer (Japan)"),
+            ('0225', "0225 - FRCTC Electronic Address (France)"),
             ('0230', "0230 - National e-Invoicing Framework (Malaysia)"),
+            ('0235', "0235 - UAE Tax Identification Number (TIN)"),
+            ('0240', "0240 - Register of legal persons (France)"),
             ('9901', "9901 - Danish Ministry of the Interior and Health"),
             ('9910', "9910 - Hungary VAT number"),
             ('9913', "9913 - Business Registers Network"),
@@ -125,6 +129,11 @@ class ResPartner(models.Model):
             ('9955', "9955 - Swedish VAT number"),
             ('9957', "9957 - French VAT number"),
             ('9959', "9959 - Employer Identification Number (EIN, USA)"),
+            ('AN', "AN - O.F.T.P. (ODETTE File Transfer Protocol)"),
+            ('AQ', "AQ - X.400 address for mail text"),
+            ('AS', "AS - AS2 exchange"),
+            ('AU', "AU - File Transfer Protocol"),
+            ('EM', "EM - Electronic mail"),
         ]
     )
     hide_peppol_fields = fields.Boolean(compute='_compute_hide_peppol_fields')

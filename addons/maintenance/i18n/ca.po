@@ -10,7 +10,7 @@
 # M Palau <mpalau@tda.ad>, 2023
 # Jonatan Gk, 2023
 # Susanna Pujol, 2023
-# Xavier, 2023
+# Harcogourmet, 2023
 # Albert Parera, 2023
 # Óscar Fonseca <tecnico@pyming.com>, 2023
 # Ivan Espinola, 2023
@@ -840,7 +840,7 @@ msgstr "Data del últim error"
 #. module: maintenance
 #: model:ir.model.fields,field_description:maintenance.field_maintenance_equipment_category__alias_incoming_local
 msgid "Local-part based incoming detection"
-msgstr ""
+msgstr "Detecció d'entrada basada en la part local"
 
 #. module: maintenance
 #: model:ir.model.fields,field_description:maintenance.field_maintenance_equipment__location

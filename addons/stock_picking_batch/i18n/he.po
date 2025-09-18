@@ -7,6 +7,7 @@
 # Hed Shefer <hed@laylinetech.com>, 2023
 # david danilov, 2023
 # שהאב חוסיין <shhab89@gmail.com>, 2023
+# ExcaliberX <excaliberx@gmail.com>, 2023
 # Lilach Gilliam <lilach@apprcase.com>, 2023
 # Ofir Blum <ofir.blum@gmail.com>, 2023
 # Lilach Gilliam <lilach.gilliam@gmail.com>, 2023
@@ -14,7 +15,6 @@
 # Yihya Hugirat <hugirat@gmail.com>, 2023
 # NoaFarkash, 2023
 # דודי מלכה <Dudimalka6@gmail.com>, 2023
-# ExcaliberX <excaliberx@gmail.com>, 2023
 # yael terner, 2024
 # ZVI BLONDER <ZVIBLONDER@gmail.com>, 2024
 # Roy Sayag, 2024
@@ -26,7 +26,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 12:32+0000\n"
+"POT-Creation-Date: 2025-05-07 20:37+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
 "Last-Translator: or balmas, 2025\n"
 "Language-Team: Hebrew (https://app.transifex.com/odoo/teams/41243/he/)\n"
@@ -39,7 +39,7 @@ msgstr ""
 #. module: stock_picking_batch
 #: model_terms:ir.ui.view,arch_db:stock_picking_batch.report_picking_batch
 msgid "2023-08-20"
-msgstr ""
+msgstr "20-08-2023"
 
 #. module: stock_picking_batch
 #: model_terms:ir.ui.view,arch_db:stock_picking_batch.view_picking_type_form_inherit
@@ -478,6 +478,8 @@ msgid ""
 "If the Automatic Batches feature is enabled, at least one 'Group by' option "
 "must be selected."
 msgstr ""
+"אם תכונת \"אצוות אוטומטיות\"  מופעלת, יש לבחור לפחות אפשרות אחת תחת \"קיבוץ "
+"לפי\"."
 
 #. module: stock_picking_batch
 #: model_terms:ir.ui.view,arch_db:stock_picking_batch.stock_picking_batch_filter
@@ -531,12 +533,12 @@ msgstr "רשימת העברות הקשורות לאצווה זו"
 #. module: stock_picking_batch
 #: model_terms:ir.ui.view,arch_db:stock_picking_batch.report_picking_batch
 msgid "Location From Name"
-msgstr ""
+msgstr "שם מיקום מקור"
 
 #. module: stock_picking_batch
 #: model_terms:ir.ui.view,arch_db:stock_picking_batch.report_picking_batch
 msgid "Location To Name"
-msgstr ""
+msgstr "שם מיקום יעד"
 
 #. module: stock_picking_batch
 #: model_terms:ir.ui.view,arch_db:stock_picking_batch.report_picking_batch
@@ -655,7 +657,7 @@ msgstr "סוג ליקוט"
 #, python-format
 msgid ""
 "Please add 'Done' quantities to the batch picking to create a new pack."
-msgstr ""
+msgstr "אנא הוסף כמויות \"בוצע\" לאיסוף האצווה כדי ליצור חבילה חדשה."
 
 #. module: stock_picking_batch
 #: model_terms:ir.ui.view,arch_db:stock_picking_batch.stock_picking_batch_form
@@ -675,7 +677,7 @@ msgstr "מוצר"
 #. module: stock_picking_batch
 #: model_terms:ir.ui.view,arch_db:stock_picking_batch.report_picking_batch
 msgid "Product Barcode"
-msgstr ""
+msgstr "ברקוד מוצר"
 
 #. module: stock_picking_batch
 #: model:ir.model,name:stock_picking_batch.model_stock_move_line
@@ -753,7 +755,7 @@ msgstr "חפש העברת אצווה"
 #. module: stock_picking_batch
 #: model:ir.model.fields,field_description:stock_picking_batch.field_stock_picking_batch__show_allocation
 msgid "Show Allocation Button"
-msgstr ""
+msgstr "הצגת כפתור הקצאה"
 
 #. module: stock_picking_batch
 #: model:ir.model.fields,field_description:stock_picking_batch.field_stock_picking_batch__show_check_availability
@@ -834,7 +836,7 @@ msgstr "איתור אריזת מלאי"
 #. module: stock_picking_batch
 #: model:ir.model.fields,field_description:stock_picking_batch.field_stock_picking_batch__move_line_ids
 msgid "Stock move lines"
-msgstr ""
+msgstr "שורות תנועות מלאי"
 
 #. module: stock_picking_batch
 #: model:ir.model.fields,field_description:stock_picking_batch.field_stock_picking_batch__move_ids
@@ -855,6 +857,9 @@ msgid ""
 "\n"
 "Incompatibilities: %s"
 msgstr ""
+"ההעברות הבאות אינן ניתנות להוספה להעברת אצווה %s.                                     אנא בדוק את מצבן ואת סוגי הפעולות שלהן.\n"
+"\n"
+"אי-תאימויות:%s"
 
 #. module: stock_picking_batch
 #: model_terms:ir.actions.act_window,help:stock_picking_batch.stock_picking_batch_action
@@ -904,7 +909,7 @@ msgstr "ההעברות הנבחרות צריכות להיות שייכות לח�
 #: code:addons/stock_picking_batch/wizard/stock_add_to_wave.py:0
 #, python-format
 msgid "The selected transfers should belong to the same operation type"
-msgstr ""
+msgstr "ההעברות שנבחרו צריכות להיות מאותו סוג פעולה."
 
 #. module: stock_picking_batch
 #: model:ir.model.fields,field_description:stock_picking_batch.field_stock_picking_batch__is_wave
@@ -930,7 +935,7 @@ msgstr "העברה"
 #. module: stock_picking_batch
 #: model_terms:ir.ui.view,arch_db:stock_picking_batch.report_picking_batch
 msgid "Transfer Display Name"
-msgstr ""
+msgstr "שם תצוגה של העברה"
 
 #. module: stock_picking_batch
 #: model_terms:ir.ui.view,arch_db:stock_picking_batch.report_picking_batch
@@ -966,11 +971,6 @@ msgstr "סוג הפעילות החריגה ברשומה."
 #, python-format
 msgid "Unassigned responsible from %s"
 msgstr "הוסר הקצאת אחראי מ- %s"
-
-#. module: stock_picking_batch
-#: model_terms:ir.ui.view,arch_db:stock_picking_batch.report_picking_batch
-msgid "Unit of Measure"
-msgstr "יחידת מידה"
 
 #. module: stock_picking_batch
 #: model:ir.actions.server,name:stock_picking_batch.action_unreserve_batch_picking
@@ -1028,7 +1028,7 @@ msgstr "כאשר מסומן, צור את האצווה בסטטוס טיוטה"
 #: code:addons/stock_picking_batch/models/stock_picking_batch.py:0
 #, python-format
 msgid "You cannot delete Done batch transfers."
-msgstr ""
+msgstr "לא ניתן למחוק העברות אצווה שבוצעו."
 
 #. module: stock_picking_batch
 #. odoo-python
@@ -1050,7 +1050,7 @@ msgstr ""
 #. module: stock_picking_batch
 #: model:ir.model.fields.selection,name:stock_picking_batch.selection__stock_picking_to_batch__mode__existing
 msgid "an existing batch transfer"
-msgstr ""
+msgstr "העברת אצווה קיימת"
 
 #. module: stock_picking_batch
 #: model:ir.model.fields.selection,name:stock_picking_batch.selection__stock_add_to_wave__mode__existing

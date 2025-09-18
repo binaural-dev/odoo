@@ -35,6 +35,7 @@
 # Wil Odoo, 2025
 # Malaz Abuidris <msea@odoo.com>, 2025
 # Ilya Rozhkov, 2025
+# Anastasiia Koroleva, 2025
 # 
 msgid ""
 msgstr ""
@@ -42,7 +43,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-03 11:38+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Ilya Rozhkov, 2025\n"
+"Last-Translator: Anastasiia Koroleva, 2025\n"
 "Language-Team: Russian (https://app.transifex.com/odoo/teams/41243/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -633,6 +634,9 @@ msgid ""
 "            Egypt Tax Authority Invoice Integration\n"
 "        "
 msgstr ""
+"\n"
+"            Интеграция с системой выставления счетов налоговой службы Египта\n"
+"        "
 
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_ke_edi_oscu
@@ -4553,6 +4557,8 @@ msgid ""
 "\n"
 "E-invoice implementation for Saudi Arabia; Integration with ZATCA\n"
 msgstr ""
+"\n"
+"Внедрение электронных счетов для Саудовской Аравии; Интеграция с ZATCA\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_sa_edi_pos
@@ -11105,6 +11111,9 @@ msgid ""
 "This module fully implements the ELM 5.0 wage standard and is Swissdec certified under certificate 1203.25. Any unauthorized modifications are strictly prohibited, as they may lead to errors in data transmission and calculations.\n"
 "The Module is not retro-compatible with Previous Swiss Payroll versions, installation will require a re-generation of your yearly Payroll-accounting.\n"
 msgstr ""
+"\n"
+"Этот модуль полностью реализует стандарт оплаты труда ELM 5.0 и сертифицирован Swissdec под сертификатом 1203.25. Любые несанкционированные модификации строго запрещены, так как они могут привести к ошибкам в передаче и расчетах данных.\n"
+"Модуль не обратно совместим с предыдущими версиями швейцарского расчета заработной платы, установка потребует повторной генерации вашей годовой отчетности по заработной плате.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_sms
@@ -11156,7 +11165,7 @@ msgid ""
 "This module implements Cloudflare Turnstile so that you can prevent bot spam on your forms.\n"
 msgstr ""
 "\n"
-"Этот модуль реализует Cloudflare Turnstile, чтобы вы могли предотвратить бот-спам в ваших формах.\n"
+"Этот модуль добавляет защиту Cloudflare Turnstile, чтобы блокировать автоматический спам на ваших формах.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_timer
@@ -13258,7 +13267,7 @@ msgid ""
 "                    <i class=\"fa fa-star-o\"></i><i class=\"fa fa-star-o\"></i><i class=\"fa fa-star-o\"></i><i class=\"fa fa-star-o\"></i><i class=\"fa fa-star-o\"></i>\n"
 "                </span>"
 msgstr ""
-"<em>Содержание Иова:</em>\n"
+"<em>Содержание работы:</em>\n"
 "                <span class=\"o_stars o_five_stars\" id=\"checkId-3\">\n"
 "                    <i class=\"fa fa-star-o\"></i><i class=\"fa fa-star-o\"></i><i class=\"fa fa-star-o\"></i><i class=\"fa fa-star-o\"></i><i class=\"fa fa-star-o\"></i>\n"
 "                </span>"
@@ -18099,7 +18108,7 @@ msgstr "Закрыть"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_cf_turnstile
 msgid "Cloudflare Turnstile"
-msgstr "Турникет Cloudflare"
+msgstr "Cloudflare Turnstile"
 
 #. module: base
 #: model:res.country,name:base.cc
@@ -19664,8 +19673,8 @@ msgstr "D - ЭЛЕКТРО-, ГАЗО-, ПАРО- И КОНДИЦИОНИРОВ�
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_delivery_dhl
-msgid "DHL Express Shipping"
-msgstr "Экспресс-доставка DHL"
+msgid "DHL Express Shipping (Legacy)"
+msgstr "DHL Express Доставка (Устаревшая)"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_din5008
@@ -21050,7 +21059,7 @@ msgstr "Рекламная рассылка"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users__signature
 msgid "Email Signature"
-msgstr "Подпись Email"
+msgstr "Подпись в письме"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner__employee
@@ -21650,8 +21659,8 @@ msgid ""
 "images to use in Odoo. An Unsplash search bar is added to the image library "
 "modal."
 msgstr ""
-"Изучите бесплатную библиотеку изображений высокого разрешения Unsplash.com и"
-" найдите изображения для использования в Odoo. В модале библиотеки "
+"Изучите бесплатную библиотеку высококачественных изображений Unsplash.com и "
+"выбирайте картинки для использования в Odoo. В модальном окне библиотеки "
 "изображений добавлена строка поиска Unsplash."
 
 #. module: base
@@ -24784,7 +24793,7 @@ msgstr "Индонезийский - Бухгалтерский учет"
 #. module: base
 #: model:ir.actions.act_window,name:base.res_partner_industry_action
 msgid "Industries"
-msgstr "Профессия"
+msgstr "Отрасли"
 
 #. module: base
 #: model:ir.model,name:base.model_res_partner_industry
@@ -35181,8 +35190,14 @@ msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_delivery_dhl
-msgid "Send your shippings through DHL and track them online"
-msgstr "Отправляйте грузы через DHL и отслеживайте их в режиме онлайн"
+msgid ""
+"This is the legacy integration with DHL Express that is no longer supported."
+" Please install the new \"DHL Express Shipping\" module and uninstall this "
+"one as soon as possible."
+msgstr ""
+"Это устаревшая интеграция с DHL Express, которая больше не поддерживается. "
+"Пожалуйста, установите новый модуль \"DHL Express Доставка\" и удалите этот "
+"как можно скорее."
 
 #. module: base
 #: model:ir.module.module,description:base.module_delivery_fedex_rest
@@ -36580,7 +36595,7 @@ msgstr "Швейцария — Торговая точка"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ch_hr_payroll_elm_transmission
 msgid "Swissdec Certified Payroll (ELM 5.0)"
-msgstr ""
+msgstr "Расчет заработной платы, сертифицированный Swissdec (ELM 5.0)"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.language_install_view_form_lang_switch
@@ -39641,7 +39656,7 @@ msgstr "Непоисковое поле %(field)r в пути %(field_path)r в 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_web_unsplash
 msgid "Unsplash Image Library"
-msgstr "Unsplash Image Library"
+msgstr "Библиотека изображений Unsplash"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_appointment_account_payment

@@ -1,23 +1,23 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # 	* sms
-# 
+#
 # Translators:
-# Wil Odoo, 2023
 # Rasareeyar Lappiam, 2024
-# 
+# Wil Odoo, 2025
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-13 10:28+0000\n"
+"POT-Creation-Date: 2025-09-04 18:38+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Rasareeyar Lappiam, 2024\n"
+"Last-Translator: Wil Odoo, 2025\n"
 "Language-Team: Thai (https://app.transifex.com/odoo/teams/41243/th/)\n"
+"Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: th\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: sms
@@ -63,10 +63,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sms.sms_template_view_form
 msgid ""
 "<span class=\"o_stat_text\">Add</span>\n"
-"                                <span class=\"o_stat_text\">Context Action</span>"
+"                                <span class=\"o_stat_text\">Context Action</"
+"span>"
 msgstr ""
 "<span class=\"o_stat_text\">เพิ่ม</span>\n"
-"                                <span class=\"o_stat_text\">การดำเนินการตามบริบท</span>"
+"                                <span "
+"class=\"o_stat_text\">การดำเนินการตามบริบท</span>"
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_template_view_form
@@ -77,35 +79,45 @@ msgstr "<span class=\"o_stat_text\">ดูตัวอย่าง</span>"
 #: model_terms:ir.ui.view,arch_db:sms.sms_template_view_form
 msgid ""
 "<span class=\"o_stat_text\">Remove</span>\n"
-"                                <span class=\"o_stat_text\">Context Action</span>"
+"                                <span class=\"o_stat_text\">Context Action</"
+"span>"
 msgstr ""
 "<span class=\"o_stat_text\">ลบออก</span>\n"
-"                                <span class=\"o_stat_text\">การดำเนินการตามบริบท</span>"
+"                                <span "
+"class=\"o_stat_text\">การดำเนินการตามบริบท</span>"
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_template_preview_form
-msgid "<span class=\"text-warning\" invisible=\"not no_record\">No records</span>"
-msgstr "<span class=\"text-warning\" invisible=\"not no_record\">ไม่มีบันทึก</span>"
+msgid ""
+"<span class=\"text-warning\" invisible=\"not no_record\">No records</span>"
+msgstr ""
+"<span class=\"text-warning\" invisible=\"not no_record\">ไม่มีบันทึก</span>"
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.ir_actions_server_view_form
 msgid ""
 "<span invisible=\"sms_method != 'sms'\">\n"
-"                                The message will be sent as an SMS to the recipients of the template\n"
-"                                and will not appear in the messaging history.\n"
+"                                The message will be sent as an SMS to the "
+"recipients of the template\n"
+"                                and will not appear in the messaging "
+"history.\n"
 "                            </span>\n"
 "                            <span invisible=\"sms_method != 'note'\">\n"
-"                                The SMS will not be sent, it will only be posted as an\n"
+"                                The SMS will not be sent, it will only be "
+"posted as an\n"
 "                                internal note in the messaging history.\n"
 "                            </span>\n"
 "                            <span invisible=\"sms_method != 'comment'\">\n"
-"                                The SMS will be sent as an SMS to the recipients of the\n"
-"                                template and it will also be posted as an internal note\n"
+"                                The SMS will be sent as an SMS to the "
+"recipients of the\n"
+"                                template and it will also be posted as an "
+"internal note\n"
 "                                in the messaging history.\n"
 "                            </span>"
 msgstr ""
 "<span invisible=\"sms_method != 'sms'\">\n"
-"                                ข้อความจะถูกส่งเป็นข้อความ SMS ถึงผู้รับของเทมเพลตและจะ\n"
+"                                ข้อความจะถูกส่งเป็นข้อความ SMS "
+"ถึงผู้รับของเทมเพลตและจะ\n"
 "                                ไม่ปรากฏในประวัติการส่งข้อความ\n"
 "                            </span>\n"
 "                            <span invisible=\"sms_method != 'note'\">\n"
@@ -147,9 +159,7 @@ msgstr "จำเป็นต้องดำเนินการ"
 msgid ""
 "Add a contextual action on the related model to open a sms composer with "
 "this template"
-msgstr ""
-"เพิ่มการดำเนินการตามบริบทในโมเดลที่เกี่ยวข้องเพื่อเปิดตัวเขียน SMS "
-"ด้วยเทมเพลตนี้"
+msgstr "เพิ่มการดำเนินการตามบริบทในโมเดลที่เกี่ยวข้องเพื่อเปิดตัวเขียน SMS ด้วยเทมเพลตนี้"
 
 #. module: sms
 #: model:ir.model.fields,help:sms.field_sms_sms__uuid
@@ -182,6 +192,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:sms.field_res_partner__message_attachment_count
 msgid "Attachment Count"
 msgstr "จำนวนสิ่งที่แนบมา"
+
+#. module: sms
+#: model:ir.model,name:sms.model_base
+msgid "Base"
+msgstr "ฐาน"
 
 #. module: sms
 #: model:ir.model.fields.selection,name:sms.selection__sms_sms__failure_type__sms_blacklist
@@ -259,6 +274,11 @@ msgstr "เลือกตัวอย่าง"
 #: model_terms:ir.ui.view,arch_db:sms.sms_composer_view_form
 msgid "Close"
 msgstr "ปิด"
+
+#. module: sms
+#: model:ir.model,name:sms.model_res_company
+msgid "Companies"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_composer__composition_mode
@@ -433,13 +453,11 @@ msgstr "ประเภทความล้มเหลว"
 msgid ""
 "Field used to store sanitized phone number. Helps speeding up searches and "
 "comparisons."
-msgstr ""
-"ช่องที่ใช้เก็บหมายเลขโทรศัพท์ที่ถูกต้อง ช่วยเร่งการค้นหาและเปรียบเทียบ"
+msgstr "ช่องที่ใช้เก็บหมายเลขโทรศัพท์ที่ถูกต้อง ช่วยเร่งการค้นหาและเปรียบเทียบ"
 
 #. module: sms
 #: model:ir.model.fields,help:sms.field_sms_template__template_fs
-msgid ""
-"File from where the template originates. Used to reset broken template."
+msgid "File from where the template originates. Used to reset broken template."
 msgstr "ไฟล์จากที่ที่เทมเพลตเริ่มต้น ใช้เพื่อรีเซ็ตเทมเพลตที่ใช้งานไม่ได้"
 
 #. module: sms
@@ -536,11 +554,11 @@ msgstr "ถ้าเลือก ข้อความบางข้อคว�
 #. module: sms
 #: model:ir.model.fields,help:sms.field_res_partner__phone_sanitized_blacklisted
 msgid ""
-"If the sanitized phone number is on the blacklist, the contact won't receive"
-" mass mailing sms anymore, from any list"
+"If the sanitized phone number is on the blacklist, the contact won't receive "
+"mass mailing sms anymore, from any list"
 msgstr ""
-"หากหมายเลขโทรศัพท์ที่ถูกต้องอยู่ในบัญชีดำ ผู้ติดต่อจะไม่ได้รับ SMS "
-"ทางเมลกลุ่มจากรายการใด ๆ อีกต่อไป"
+"หากหมายเลขโทรศัพท์ที่ถูกต้องอยู่ในบัญชีดำ ผู้ติดต่อจะไม่ได้รับ SMS ทางเมลกลุ่มจากรายการใด ๆ "
+"อีกต่อไป"
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.mail_resend_message_view_form
@@ -766,11 +784,9 @@ msgstr "จํานวนข้อความที่มีข้อผิด
 #. module: sms
 #: model:ir.model.fields,help:sms.field_sms_composer__res_ids_count
 msgid ""
-"Number of recipients that will receive the SMS if sent in mass mode, without"
-" applying the Active Domain value"
-msgstr ""
-"จำนวนผู้รับที่จะได้รับข้อความ SMS หากส่งในโหมดกลุ่ม "
-"โดยไม่ต้องใช้ค่าโดเมนที่ใช้งานอยู่"
+"Number of recipients that will receive the SMS if sent in mass mode, without "
+"applying the Active Domain value"
+msgstr "จำนวนผู้รับที่จะได้รับข้อความ SMS หากส่งในโหมดกลุ่ม โดยไม่ต้องใช้ค่าโดเมนที่ใช้งานอยู่"
 
 #. module: sms
 #: model:ir.model.fields.selection,name:sms.selection__sms_sms__failure_type__sms_optout
@@ -782,12 +798,12 @@ msgstr "ยกเลิกแล้ว"
 msgid ""
 "Optional translation language (ISO code) to select when sending out an "
 "email. If not set, the english version will be used. This should usually be "
-"a placeholder expression that provides the appropriate language, e.g. {{ "
-"object.partner_id.lang }}."
+"a placeholder expression that provides the appropriate language, e.g. "
+"{{ object.partner_id.lang }}."
 msgstr ""
 "ตัวเลือกภาษาการแปล (โค้ด ISO) เพื่อเลือกเมื่อส่งอีเมล หากไม่ได้ตั้งค่าไว้ "
-"ระบบจะใช้เวอร์ชันภาษาอังกฤษ โดยปกติควรเป็นตัวอย่างนิพจน์ที่ให้ภาษาที่เหมาะสม"
-" เช่น {{ object.partner_id.lang }}"
+"ระบบจะใช้เวอร์ชันภาษาอังกฤษ โดยปกติควรเป็นตัวอย่างนิพจน์ที่ให้ภาษาที่เหมาะสม เช่น "
+"{{ object.partner_id.lang }}"
 
 #. module: sms
 #: model:ir.model,name:sms.model_sms_sms
@@ -814,8 +830,7 @@ msgstr "หมายเลขโทรศัพท์"
 msgid ""
 "Phone number of the recipient. If changed, it will be recorded on "
 "recipient's profile."
-msgstr ""
-"หมายเลขโทรศัพท์ของผู้รับ หากมีการเปลี่ยนแปลงจะถูกบันทึกไว้ในโปรไฟล์ของผู้รับ"
+msgstr "หมายเลขโทรศัพท์ของผู้รับ หากมีการเปลี่ยนแปลงจะถูกบันทึกไว้ในโปรไฟล์ของผู้รับ"
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_res_partner__phone_mobile_search
@@ -1037,7 +1052,6 @@ msgstr "ดูตัวอย่าง SMS"
 #. module: sms
 #. odoo-javascript
 #: code:addons/sms/static/src/components/sms_widget/fields_sms_widget.xml:0
-#: code:addons/sms/static/src/components/sms_widget/fields_sms_widget.xml:0
 #, python-format
 msgid "SMS Pricing"
 msgstr "ราคา SMS"
@@ -1100,8 +1114,7 @@ msgstr "เนื้อหา SMS"
 #: code:addons/sms/models/ir_actions_server.py:0
 #, python-format
 msgid "SMS template model of %(action_name)s does not match action model."
-msgstr ""
-"รูปแบบเทมเพลตข้อความ SMS ของ %(action_name)s ไม่ตรงกับรูปแบบการดำเนินการ"
+msgstr "รูปแบบเทมเพลตข้อความ SMS ของ %(action_name)s ไม่ตรงกับรูปแบบการดำเนินการ"
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_sms__sms_tracker_id
@@ -1205,8 +1218,8 @@ msgstr "การส่งล้มเหลว"
 #. odoo-python
 #: code:addons/sms/models/ir_actions_server.py:0
 #, python-format
-msgid "Sending SMS can only be done on a mail.thread or a transient model"
-msgstr "การส่ง SMS สามารถทำได้บน mail.thread หรือโมเดลชั่วคราวเท่านั้น"
+msgid "Sending SMS can only be done on a not transient mail.thread model"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields.selection,name:sms.selection__sms_sms__state__pending
@@ -1239,8 +1252,7 @@ msgstr "การดำเนินการของแถบด้านข้
 msgid ""
 "Sidebar action to make this template available on records of the related "
 "document model"
-msgstr ""
-"การดำเนินการของแถบด้านข้างเพื่อทำให้เทมเพลตนี้พร้อมใช้งานในบันทึกของโมเดลเอกสารที่เกี่ยวข้อง"
+msgstr "การดำเนินการของแถบด้านข้างเพื่อทำให้เทมเพลตนี้พร้อมใช้งานในบันทึกของโมเดลเอกสารที่เกี่ยวข้อง"
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_composer__comment_single_recipient
@@ -1346,8 +1358,7 @@ msgstr "SMS นี้ถูกลบออกแล้ว เนื่องจ�
 #: model_terms:ir.ui.view,arch_db:sms.res_partner_view_form
 msgid ""
 "This phone number is blacklisted for SMS Marketing. Click to unblacklist."
-msgstr ""
-"หมายเลขโทรศัพท์นี้ถูกขึ้นบัญชีดำสำหรับการตลาดผ่าน SMS คลิกเพื่อยกเลิกบัญชีดำ"
+msgstr "หมายเลขโทรศัพท์นี้ถูกขึ้นบัญชีดำสำหรับการตลาดผ่าน SMS คลิกเพื่อยกเลิกบัญชีดำ"
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_resend_recipient__resend
@@ -1370,17 +1381,21 @@ msgid ""
 "- 'Update a Record': update the values of a record\n"
 "- 'Create Activity': create an activity (Discuss)\n"
 "- 'Send Email': post a message, a note or send an email (Discuss)\n"
-"- 'Send SMS': send SMS, log them on documents (SMS)- 'Add/Remove Followers': add or remove followers to a record (Discuss)\n"
+"- 'Send SMS': send SMS, log them on documents (SMS)- 'Add/Remove Followers': "
+"add or remove followers to a record (Discuss)\n"
 "- 'Create Record': create a new record with new values\n"
 "- 'Execute Code': a block of Python code that will be executed\n"
-"- 'Send Webhook Notification': send a POST request to an external system, also known as a Webhook\n"
-"- 'Execute Existing Actions': define an action that triggers several other server actions\n"
+"- 'Send Webhook Notification': send a POST request to an external system, "
+"also known as a Webhook\n"
+"- 'Execute Existing Actions': define an action that triggers several other "
+"server actions\n"
 msgstr ""
 "ประเภทของการทำงานของเซิร์ฟเวอร์ ค่าต่อไปนี้มีอยู่:\n"
 "- 'อัปเดตบันทึก': อัปเดตค่าของบันทึก\n"
 "- 'สร้างกิจกรรม': สร้างกิจกรรม (แชท)\n"
 "- 'ส่งอีเมล': โพสต์ข้อความ บันทึก หรือส่งอีเมล (สนทนา)\n"
-"- 'ส่ง SMS': ส่ง SMS, บันทึกไว้ในเอกสาร (SMS)- 'เพิ่ม/ลบผู้ติดตาม': เพิ่มหรือลบผู้ติดตามในบันทึก (สนทนา)\n"
+"- 'ส่ง SMS': ส่ง SMS, บันทึกไว้ในเอกสาร (SMS)- 'เพิ่ม/ลบผู้ติดตาม': "
+"เพิ่มหรือลบผู้ติดตามในบันทึก (สนทนา)\n"
 "- 'สร้างบันทึก': สร้างบันทึกใหม่ด้วยค่าใหม่\n"
 "- 'การรันโค้ด': บล็อกของโค้ด Python ที่จะถูกดำเนินการ\n"
 "- 'ส่งการแจ้งเตือน Webhook': ส่งคำขอ POST ไปยังระบบภายนอกหรือที่เรียกว่า Webhook\n"
@@ -1426,7 +1441,8 @@ msgid ""
 "'comment': generated by user input e.g. through discuss or composer\n"
 "'email_outgoing': generated by a mailing\n"
 "'notification': generated by system e.g. tracking messages\n"
-"'auto_comment': generated by automated notification mechanism e.g. acknowledgment\n"
+"'auto_comment': generated by automated notification mechanism e.g. "
+"acknowledgment\n"
 "'user_notification': generated for a specific recipient"
 msgstr ""
 "ใช้เพื่อจัดหมวดหมู่ตัวสร้างข้อความ\n"

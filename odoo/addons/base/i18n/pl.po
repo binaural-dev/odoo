@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* base
-# 
+# * base
+#
 # Translators:
 # Martin Trigaux, 2024
 # MAHAMADASIF ANSARI, 2024
@@ -9,22 +9,27 @@
 # Paweł Wodyński <pw@myodoo.pl>, 2024
 # Tadeusz Karpiński <tadeuszkarpinski@gmail.com>, 2024
 # Janusz Harkot <jh@trilab.pl>, 2025
-# Marta Wacławek, 2025
 # Wil Odoo, 2025
-# 
+# Marta Wacławek, 2025
+# "Marta (wacm)" <wacm@odoo.com>, 2025.
+# Łukasz Grzenkowicz <lukasz.grzenkowicz@4biznes.eu>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-03 11:38+0000\n"
-"PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Wil Odoo, 2025\n"
-"Language-Team: Polish (https://app.transifex.com/odoo/teams/41243/pl/)\n"
+"PO-Revision-Date: 2025-09-18 01:19+0000\n"
+"Last-Translator: \"Marta (wacm)\" <wacm@odoo.com>\n"
+"Language-Team: Polish <https://translate.odoo.com/projects/odoo-17/base/pl/>"
+"\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: pl\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && ("
+"n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
+"n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"X-Generator: Weblate 5.12.2\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_at_reports
@@ -606,6 +611,9 @@ msgid ""
 "            Egypt Tax Authority Invoice Integration\n"
 "        "
 msgstr ""
+"\n"
+"            Integracja z fakturami egipskiego urzędu skarbowego\n"
+"        "
 
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_ke_edi_oscu
@@ -3579,6 +3587,9 @@ msgid ""
 "\n"
 "Bridge module to make the website e-commerce compatible with the product configurator\n"
 msgstr ""
+"\n"
+"Moduł pomostowy umożliwiający kompatybilność witryny e-commerce z "
+"konfiguratorem produktów\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_base_automation_hr_contract
@@ -4448,6 +4459,8 @@ msgid ""
 "\n"
 "E-Transport implementation for Batch Pickings in Romania\n"
 msgstr ""
+"\n"
+"Implementacja e-Transport dla kompletacji zbiorowej w Rumunii.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_ro_edi_stock
@@ -4455,6 +4468,8 @@ msgid ""
 "\n"
 "E-Transport implementation for Romania\n"
 msgstr ""
+"\n"
+"Implementacja e-Transport dla Rumunii\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_it_edi
@@ -4480,6 +4495,8 @@ msgid ""
 "\n"
 "E-invoice implementation for Saudi Arabia; Integration with ZATCA\n"
 msgstr ""
+"\n"
+"mplementacja e-faktury dla Arabii Saudyjskiej; Integracja z ZATCA\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_sa_edi_pos
@@ -10866,6 +10883,9 @@ msgid ""
 "This module fully implements the ELM 5.0 wage standard and is Swissdec certified under certificate 1203.25. Any unauthorized modifications are strictly prohibited, as they may lead to errors in data transmission and calculations.\n"
 "The Module is not retro-compatible with Previous Swiss Payroll versions, installation will require a re-generation of your yearly Payroll-accounting.\n"
 msgstr ""
+"\n"
+"Ten moduł w pełni implementuje standard pensji ELM 5.0 i jest certyfikowany certyfikatem 1203.25 Swissdec. Wszelkie nieautoryzowane modyfikacje są surowo wzbronione, ponieważ mogą prowadzić do błędów w transmisji danych i obliczeniach.\n"
+"Moduł nie jest retrokompatybilny z poprzednimi wersjami szwajcarskiej listy płac, instalacja będzie wymagać ponownego wygenerowania rocznej księgowości listy płac.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_sms
@@ -19404,8 +19424,8 @@ msgstr "D - DOSTAWA ENERGII ELEKTRYCZNEJ, GAZU, PARY I KLIMATYZACJI"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_delivery_dhl
-msgid "DHL Express Shipping"
-msgstr "Dostawa DHL Express"
+msgid "DHL Express Shipping (Legacy)"
+msgstr "Dostawa DHL Express (przestarzałe)"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_din5008
@@ -21148,7 +21168,7 @@ msgstr "Estonia - Raporty księgowe"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ee_rounding
 msgid "Estonia - Rounding"
-msgstr ""
+msgstr "Estonia - Zaokrąglanie"
 
 #. module: base
 #: model:res.country,name:base.sz
@@ -21599,7 +21619,7 @@ msgstr "Wyodrębnij dane ze skanów faktur, aby wypełnić je automatycznie"
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_U
 msgid "Extraterritorial"
-msgstr "Eksterytorialny"
+msgstr "Fundacja"
 
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_F
@@ -22258,7 +22278,7 @@ msgstr "Czcionka"
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_I
 msgid "Food/Hospitality"
-msgstr "Żywność/Gospodarka"
+msgstr "Żywienie/Hotelarstwo"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_company__report_footer
@@ -33772,12 +33792,12 @@ msgstr "Rumunia - Raporty księgowe"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ro_edi_stock
 msgid "Romania - E-Transport"
-msgstr ""
+msgstr "Rumunia - E-Transport"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ro_edi_stock_batch
 msgid "Romania - E-Transport Batch Pickings"
-msgstr ""
+msgstr "Rumunia - E-Transport kompletacja zbiorcza"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ro_edi
@@ -34843,8 +34863,14 @@ msgstr "Wysyłaj swoje paczki przez Shiprocket i śledź je online"
 
 #. module: base
 #: model:ir.module.module,description:base.module_delivery_dhl
-msgid "Send your shippings through DHL and track them online"
-msgstr "Wyślij swoje przesyłki za pośrednictwem DHL i śledź je online"
+msgid ""
+"This is the legacy integration with DHL Express that is no longer supported."
+" Please install the new \"DHL Express Shipping\" module and uninstall this "
+"one as soon as possible."
+msgstr ""
+"To jest przestarzała integracja z DHL Express, która nie jest już "
+"obsługiwana. Zainstaluj nowy moduł \"DHL Express\", a ten odinstaluj tak "
+"szybko jak to możliwe."
 
 #. module: base
 #: model:ir.module.module,description:base.module_delivery_fedex_rest
@@ -36243,7 +36269,7 @@ msgstr "Szwajcaria - Punkt Sprzedaży"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ch_hr_payroll_elm_transmission
 msgid "Swissdec Certified Payroll (ELM 5.0)"
-msgstr ""
+msgstr "Lista płac certyfikowana Swissdec (ELM 5.0)"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.language_install_view_form_lang_switch
@@ -41519,7 +41545,7 @@ msgstr "eCommerce w spotkaniach"
 #: model:ir.module.category,name:base.module_category_website_elearning
 #: model:ir.module.module,shortdesc:base.module_website_slides
 msgid "eLearning"
-msgstr "eNauka"
+msgstr "eLearning"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_services_expenses

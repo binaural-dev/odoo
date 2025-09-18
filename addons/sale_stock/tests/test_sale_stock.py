@@ -1953,19 +1953,24 @@ class TestSaleStock(TestSaleCommon, ValuationReconciliationTestCommon):
         self.env.user.groups_id += self.env.ref('stock.group_stock_multi_locations')
         self.env.user.groups_id += self.env.ref('stock.group_adv_location')
         warehouse = self.company_data['default_warehouse']
+        customer_location = self.env.ref('stock.stock_location_customers')
         # Create two child locations.
         parent_location = warehouse.lot_stock_id
         child_location_1 = self.env['stock.location'].create({
                 'name': 'child_1',
-                'location_id': parent_location.id,
+                'location_id': customer_location.id,
         })
         child_location_2 = self.env['stock.location'].create({
                 'name': 'child_2',
-                'location_id': parent_location.id,
+                'location_id': customer_location.id,
         })
         # Enable 2-steps delivery
         with Form(warehouse) as w:
             w.delivery_steps = 'pick_ship'
+        # update the qty available for the products
+        (self.product_a | self.product_b).type = 'product'
+        self.env['stock.quant']._update_available_quantity(self.product_a, parent_location, 10)
+        self.env['stock.quant']._update_available_quantity(self.product_b, parent_location, 1)
         so = self._get_new_sale_order(product=self.product_a)
         self.env['sale.order.line'].create({
             'product_id': self.product_b.id,
@@ -1974,13 +1979,60 @@ class TestSaleStock(TestSaleCommon, ValuationReconciliationTestCommon):
         self.assertEqual(len(so.order_line), 2)
         so.action_confirm()
         self.assertEqual(len(so.picking_ids), 2)
-        so.picking_ids[1].move_ids[0].location_dest_id = child_location_1
-        so.picking_ids[1].move_ids[1].location_dest_id = child_location_2
+        pick_picking = so.picking_ids.filtered(lambda p: p.picking_type_id == warehouse.pick_type_id)
+        self.assertEqual(pick_picking.state, 'assigned')
+        delivery_picking = so.picking_ids - pick_picking
+        self.assertEqual(delivery_picking.state, 'waiting')
+        delivery_picking.move_ids[0].location_dest_id = child_location_1
+        delivery_picking.move_ids[1].location_dest_id = child_location_2
         # Pack the moves of the first picking together.
-        package = so.picking_ids[0].action_put_in_pack()
+        package = pick_picking.action_put_in_pack()
         # a new package is made and done quantities should be in same package
         self.assertTrue(package)
-        so.picking_ids[0].button_validate()
-        self.assertEqual(so.picking_ids[0].state, 'done')
-        self.assertEqual(so.picking_ids[1].move_ids.move_line_ids[0].location_dest_id, child_location_1)
-        self.assertEqual(so.picking_ids[1].move_ids.move_line_ids[1].location_dest_id, child_location_2)
+        pick_picking.button_validate()
+        self.assertEqual(pick_picking.state, 'done')
+        self.assertEqual(delivery_picking.state, 'assigned')
+        self.assertEqual(delivery_picking.move_ids.move_line_ids[0].location_dest_id, child_location_1)
+        self.assertEqual(delivery_picking.move_ids.move_line_ids[1].location_dest_id, child_location_2)
+
+    def test_update_sol_quantity_without_packaging(self):
+        """
+        Test updating a SOL quantity without specifying a packaging (eg through catalog).
+        Ensure both the move's quantity & packaging are correctly updated.
+        """
+        wh = self.env['stock.warehouse'].search([('company_id', '=', self.env.company.id)], limit=1)
+        wh.delivery_steps = 'pick_pack_ship'
+
+        pack3, pack6 = self.env['product.packaging'].create([{
+            'name': 'Pack Of %s' % qty,
+            'product_id': self.product_a.id,
+            'qty': qty,
+        } for qty in [3, 6]])
+
+        so = self.env['sale.order'].create({
+            'partner_id': self.partner_a.id,
+            'order_line': [(0, 0, {
+                'product_id': self.product_a.id,
+                'product_uom_qty': 1,
+                'product_uom': self.product_a.uom_id.id,
+            })],
+        })
+        so.action_confirm()
+        self.assertFalse(so.order_line.product_packaging_id)
+
+        so.order_line.product_uom_qty = 12
+        self.assertEqual(so.order_line.product_packaging_id, pack6)
+        moves = so.procurement_group_id.stock_move_ids
+        self.assertRecordValues(moves, [
+            {'product_uom_qty': 12, 'product_packaging_qty': 2, 'product_packaging_id': pack6.id},
+            {'product_uom_qty': 12, 'product_packaging_qty': 2, 'product_packaging_id': pack6.id},
+            {'product_uom_qty': 12, 'product_packaging_qty': 2, 'product_packaging_id': pack6.id},
+        ])
+
+        pick_sm = moves.filtered(lambda sm: sm.location_id == wh.lot_stock_id)
+        pick_sm.product_packaging_id = pack3
+        self.assertRecordValues(moves, [
+            {'product_uom_qty': 12, 'product_packaging_qty': 4, 'product_packaging_id': pack3.id},
+            {'product_uom_qty': 12, 'product_packaging_qty': 4, 'product_packaging_id': pack3.id},
+            {'product_uom_qty': 12, 'product_packaging_qty': 4, 'product_packaging_id': pack3.id},
+        ])

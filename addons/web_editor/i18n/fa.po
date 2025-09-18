@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # 	* web_editor
-# 
+#
 # Translators:
 # Hamid Ahmadimoghaddam, 2023
 # سید محمد آذربرا <mohammadazarbara98@gmail.com>, 2023
@@ -14,29 +14,29 @@
 # Martin Trigaux, 2023
 # Mohsen Mohammadi <iammohsen.123@gmail.com>, 2023
 # F Hariri <fhari1234@gmail.com>, 2024
-# mohammad rahmani <mohammadrahmani2o0@gmail.com>, 2024
 # Mostafa Barmshory <mostafa.barmshory@gmail.com>, 2025
 # Hanna Kheradroosta, 2025
 # Hamed Mohammadi <hamed@dehongi.com>, 2025
 # Naser mars, 2025
-# 
+# Mohammadamir Heshmatkhah <maheshmatkhah.soft@gmail.com>, 2025
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-10 10:35+0000\n"
+"POT-Creation-Date: 2025-05-09 20:37+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Naser mars, 2025\n"
+"Last-Translator: Mohammadamir Heshmatkhah <maheshmatkhah.soft@gmail.com>, "
+"2025\n"
 "Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: fa\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/js/editor/snippets.options.js:0
 #: code:addons/web_editor/static/src/js/editor/snippets.options.js:0
 #, python-format
 msgid "%spx"
@@ -54,7 +54,7 @@ msgstr "%spx (اصلی)"
 #: code:addons/web_editor/static/src/js/editor/snippets.options.js:0
 #, python-format
 msgid "%spx (Suggested)"
-msgstr "٪sپیکسل (پیشنهادی)"
+msgstr "%s پیکسل (پیشنهادی)"
 
 #. module: web_editor
 #. odoo-javascript
@@ -65,8 +65,8 @@ msgid ""
 "'Alt tag' specifies an alternate text for an image, if the image cannot be "
 "displayed (slow connection, missing image, screen reader ...)."
 msgstr ""
-"متن 'تگ Alt' متن جایگزینی را برای یک تصویر مشخص می‌کند، اگر تصویر قابل نمایش"
-" نباشد (اتصال کند، تصویر گم شده، خواننده صفحه ...)."
+"متن 'تگ Alt' متن جایگزینی را برای یک تصویر مشخص می‌کند، اگر تصویر قابل نمایش "
+"نباشد (اتصال کند، تصویر گم شده، خواننده صفحه ...)."
 
 #. module: web_editor
 #. odoo-javascript
@@ -75,8 +75,8 @@ msgstr ""
 #, python-format
 msgid "'Title tag' is shown as a tooltip when you hover the picture."
 msgstr ""
-"«برچسب عنوان» زمانی که نشانگر را روی تصویر قرار دهید به‌صورت یک ابزارک "
-"نمایان می‌شود."
+"«برچسب عنوان» زمانی که نشانگر را روی تصویر قرار دهید به‌صورت یک ابزارک نمایان "
+"می‌شود."
 
 #. module: web_editor
 #. odoo-javascript
@@ -450,7 +450,6 @@ msgstr "انیمیشن‌شده"
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
 #, python-format
 msgid "Anonymous"
 msgstr "ناشناس"
@@ -458,7 +457,6 @@ msgstr "ناشناس"
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/xml/editor.xml:0
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "Apply"
@@ -502,7 +500,6 @@ msgstr "پیوست URL"
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "Autoconvert to relative link"
@@ -575,7 +572,6 @@ msgstr "هشدار بنر"
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/js/wysiwyg/wysiwyg.js:0
 #: code:addons/web_editor/static/src/js/wysiwyg/wysiwyg.js:0
 #, python-format
 msgid "Banners"
@@ -694,9 +690,6 @@ msgstr "فهرست گلوله‌ای"
 #: code:addons/web_editor/static/src/js/editor/snippets.editor.js:0
 #: code:addons/web_editor/static/src/js/wysiwyg/wysiwyg.js:0
 #: code:addons/web_editor/static/src/xml/snippets.xml:0
-#: code:addons/web_editor/static/src/xml/snippets.xml:0
-#: code:addons/web_editor/static/src/xml/snippets.xml:0
-#: code:addons/web_editor/static/src/xml/snippets.xml:0
 #, python-format
 msgid "Button"
 msgstr "دکمه"
@@ -729,14 +722,16 @@ msgstr "مرکز"
 msgid "ChatGPT"
 msgstr ""
 "<h1>وب ویرایشگر</h1>\n"
-"<p>این ماژول Odoo به شما اجازه می‌دهد تا تنها با کشیدن و رها کردن (drag and drop) اجزای HTML را ویرایش کنید.</p>\n"
+"<p>این ماژول Odoo به شما اجازه می‌دهد تا تنها با کشیدن و رها کردن (drag and "
+"drop) اجزای HTML را ویرایش کنید.</p>\n"
 "<p>ویژگی‌ها شامل:</p>\n"
 "<ul>\n"
 "    <li>ویرایش مستقیم در صفحه</li>\n"
 "    <li>تنظیمات پیشرفته برای توسعه‌دهندگان</li>\n"
 "    <li>پشتیبانی از قالب‌های مختلف و تم‌های سفارشی</li>\n"
 "</ul>\n"
-"<p>برای شروع، به سادگی یک صفحه باز کرده و ویرایش را با ابزارهای موجود آغاز کنید.</p>"
+"<p>برای شروع، به سادگی یک صفحه باز کرده و ویرایش را با ابزارهای موجود آغاز "
+"کنید.</p>"
 
 #. module: web_editor
 #. odoo-javascript
@@ -790,7 +785,6 @@ msgstr "راه‌انداز همکارانه"
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options_background_color_widget
@@ -965,7 +959,6 @@ msgstr "برش تصویر"
 #. odoo-javascript
 #: code:addons/web_editor/static/src/js/wysiwyg/widgets/link.js:0
 #: code:addons/web_editor/static/src/xml/snippets.xml:0
-#: code:addons/web_editor/static/src/xml/snippets.xml:0
 #: model_terms:ir.ui.view,arch_db:web_editor.colorpicker
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options_image_optimization_widgets
 #: model_terms:ir.ui.view,arch_db:web_editor.snippets
@@ -1005,8 +998,6 @@ msgstr "داش‌لاین"
 #. odoo-javascript
 #: code:addons/web_editor/static/src/xml/editor.xml:0
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options
 #, python-format
 msgid "Default"
@@ -1014,7 +1005,6 @@ msgstr "پیش‌فرض"
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "Default + Rounded"
@@ -1027,7 +1017,6 @@ msgstr "تعریف یک گرادیان سفارشی"
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
 #: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
 #, python-format
 msgid "Delete"
@@ -1060,8 +1049,6 @@ msgstr "‌دستگاه‌ها"
 #: code:addons/web_editor/static/src/js/wysiwyg/widgets/alt_dialog.xml:0
 #: code:addons/web_editor/static/src/xml/editor.xml:0
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #: model_terms:ir.ui.view,arch_db:web_editor.snippets
 #, python-format
 msgid "Discard"
@@ -1080,8 +1067,8 @@ msgid ""
 "Discover a world of awesomeness in our copyright-free image haven. No legal "
 "drama, just nice images!"
 msgstr ""
-"کشف دنیایی از شگفتی‌ها در مخزن تصاویر بدون کپی‌رایت ما. بدون دردسر قانونی، "
-"فقط تصاویر زیبا!"
+"کشف دنیایی از شگفتی‌ها در مخزن تصاویر بدون کپی‌رایت ما. بدون دردسر قانونی، فقط "
+"تصاویر زیبا!"
 
 #. module: web_editor
 #. odoo-javascript
@@ -1160,7 +1147,6 @@ msgstr "بلوک ساختاری را بکشید و رها کنید."
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/xml/snippets.xml:0
 #: code:addons/web_editor/static/src/xml/snippets.xml:0
 #, python-format
 msgid "Duplicate Container"
@@ -1247,8 +1233,6 @@ msgstr "نقل قول خالی"
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/components/media_dialog/image_selector.js:0
-#: code:addons/web_editor/static/src/components/media_dialog/image_selector.js:0
-#: code:addons/web_editor/static/src/components/media_dialog/image_selector.js:0
 #, python-format
 msgid "Error"
 msgstr "خطا"
@@ -1288,14 +1272,12 @@ msgstr "فایل بارگذاری شد"
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "Fill"
 msgstr "پر کنید"
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "Fill + Rounded"
@@ -1320,7 +1302,6 @@ msgstr "اولین پانل"
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "Flat"
@@ -1388,11 +1369,6 @@ msgstr "به دلایل فنی، این بلوک نمی‌تواند در این
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options_image_optimization_widgets
 #, python-format
 msgid "Format"
@@ -1457,7 +1433,6 @@ msgstr "هندسی گرد"
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/xml/snippets.xml:0
 #: code:addons/web_editor/static/src/xml/snippets.xml:0
 #, python-format
 msgid "Gradient"
@@ -1541,7 +1516,6 @@ msgstr "<h6>سرفصل ۶</h6>"
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
 #: code:addons/web_editor/static/src/xml/editor.xml:0
 #, python-format
 msgid "Heading 1"
@@ -1550,7 +1524,6 @@ msgstr "<h1>عنوان ۱</h1>"
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
 #: code:addons/web_editor/static/src/xml/editor.xml:0
 #, python-format
 msgid "Heading 2"
@@ -1558,7 +1531,6 @@ msgstr "<h2>سرفصل ۲</h2>"
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
 #: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
 #: code:addons/web_editor/static/src/xml/editor.xml:0
 #, python-format
@@ -1895,7 +1867,6 @@ msgstr "متن را اینجا وارد کنید"
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
 #, python-format
 msgid "Insert left"
 msgstr "قرار دادن چپ"
@@ -1923,7 +1894,6 @@ msgstr "درج محتوای شخصی‌سازی‌شده"
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
 #: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
 #, python-format
 msgid "Insert right"
@@ -1981,7 +1951,6 @@ msgstr "بر چسب"
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/xml/editor.xml:0
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "Large"
@@ -2063,7 +2032,6 @@ msgstr "لینک به کلیپ‌بورد کپی شد."
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
 #: code:addons/web_editor/static/src/xml/editor.xml:0
 #, python-format
 msgid "List"
@@ -2118,8 +2086,6 @@ msgstr "حداکثر ارتفاع"
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/js/wysiwyg/wysiwyg.js:0
-#: code:addons/web_editor/static/src/js/wysiwyg/wysiwyg.js:0
-#: code:addons/web_editor/static/src/js/wysiwyg/wysiwyg.js:0
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options
 #, python-format
 msgid "Media"
@@ -2128,8 +2094,6 @@ msgstr "رسانه"
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/xml/editor.xml:0
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "Medium"
@@ -2166,14 +2130,12 @@ msgstr "به پایین حرکت کن"
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
 #, python-format
 msgid "Move left"
 msgstr "به چپ حرکت کنید"
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
 #: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
 #, python-format
 msgid "Move right"
@@ -2200,8 +2162,6 @@ msgstr "نام"
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/js/wysiwyg/wysiwyg.js:0
-#: code:addons/web_editor/static/src/js/wysiwyg/wysiwyg.js:0
 #: code:addons/web_editor/static/src/js/wysiwyg/wysiwyg.js:0
 #, python-format
 msgid "Navigation"
@@ -2277,8 +2237,6 @@ msgstr "هیچکدام"
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/xml/editor.xml:0
-#: code:addons/web_editor/static/src/xml/editor.xml:0
-#: code:addons/web_editor/static/src/xml/editor.xml:0
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options_image_optimization_widgets
 #, python-format
 msgid "Normal"
@@ -2306,7 +2264,6 @@ msgstr "اوه، به نظر می‌رسد که هوش مصنوعی ما در د
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options
 #, python-format
 msgid "Open in new window"
@@ -2332,14 +2289,12 @@ msgstr "مبدأ"
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "Outline"
 msgstr "راهنما"
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "Outline + Rounded"
@@ -2396,16 +2351,7 @@ msgstr "موقعیت"
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/xml/snippets.xml:0
-#, python-format
-msgid "Preset #{number}"
-msgstr ""
-
-#. module: web_editor
-#. odoo-javascript
 #: code:addons/web_editor/static/src/components/media_dialog/video_selector.xml:0
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "Preview"
@@ -2567,7 +2513,6 @@ msgstr "حذف کنید (حذف)"
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/xml/snippets.xml:0
-#: code:addons/web_editor/static/src/xml/snippets.xml:0
 #, python-format
 msgid "Remove Block"
 msgstr "حذف بلوک"
@@ -2643,7 +2588,6 @@ msgstr "تنظیم مجدد"
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "Reset Image"
@@ -2869,7 +2813,6 @@ msgstr "فرستادن پیام"
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
 #: model_terms:ir.ui.view,arch_db:web_editor.snippets
 #, python-format
 msgid "Separator"
@@ -2949,7 +2892,6 @@ msgstr "امضا"
 #. odoo-javascript
 #: code:addons/web_editor/static/src/js/editor/snippets.options.js:0
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #: model_terms:ir.ui.view,arch_db:web_editor.colorpicker
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options
 #, python-format
@@ -2984,9 +2926,6 @@ msgstr "اندازه ۵x"
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/xml/editor.xml:0
-#: code:addons/web_editor/static/src/xml/editor.xml:0
-#: code:addons/web_editor/static/src/xml/editor.xml:0
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "Small"
@@ -3044,8 +2983,8 @@ msgstr ""
 #, python-format
 msgid "Sorry, your prompt is too long. Try to say it in fewer words."
 msgstr ""
-"متاسفم، درخواست شما بیش از حد طولانی است. سعی کنید آن را با کلمات کمتری بیان"
-" کنید."
+"متاسفم، درخواست شما بیش از حد طولانی است. سعی کنید آن را با کلمات کمتری بیان "
+"کنید."
 
 #. module: web_editor
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options
@@ -3075,16 +3014,6 @@ msgstr "شروع"
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
-#: code:addons/web_editor/static/src/js/wysiwyg/wysiwyg.js:0
-#: code:addons/web_editor/static/src/js/wysiwyg/wysiwyg.js:0
-#: code:addons/web_editor/static/src/js/wysiwyg/wysiwyg.js:0
-#: code:addons/web_editor/static/src/js/wysiwyg/wysiwyg.js:0
-#: code:addons/web_editor/static/src/js/wysiwyg/wysiwyg.js:0
 #: code:addons/web_editor/static/src/js/wysiwyg/wysiwyg.js:0
 #, python-format
 msgid "Structure"
@@ -3092,7 +3021,6 @@ msgstr "ساختار"
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options
 #, python-format
@@ -3137,7 +3065,6 @@ msgstr "گزینه‌های جدول"
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
-#: code:addons/web_editor/static/src/xml/snippets.xml:0
 #: code:addons/web_editor/static/src/xml/snippets.xml:0
 #, python-format
 msgid "Text"
@@ -3193,8 +3120,8 @@ msgid ""
 "The document was already saved from someone with a different history for "
 "model %r, field %r with id %r."
 msgstr ""
-"سند قبلاً توسط شخصی با تاریخچه متفاوت برای مدل %r، فیلد %r با شناسه %r ذخیره"
-" شده بود."
+"سند قبلاً توسط شخصی با تاریخچه متفاوت برای مدل %r، فیلد %r با شناسه %r ذخیره "
+"شده بود."
 
 #. module: web_editor
 #. odoo-javascript
@@ -3223,10 +3150,12 @@ msgstr "آدرس اینترنتی ارائه شده معتبر نیست"
 #, python-format
 msgid ""
 "The version from the database will be used.\n"
-"                            If you need to keep your changes, copy the content below and edit the new document."
+"                            If you need to keep your changes, copy the "
+"content below and edit the new document."
 msgstr ""
 "نسخه از پایگاه داده استفاده خواهد شد.\n"
-"                            اگر نیاز دارید تغییرات خود را حفظ کنید، محتوای زیر را کپی کرده و سند جدید را ویرایش کنید."
+"                            اگر نیاز دارید تغییرات خود را حفظ کنید، محتوای "
+"زیر را کپی کرده و سند جدید را ویرایش کنید."
 
 #. module: web_editor
 #. odoo-javascript
@@ -3312,7 +3241,6 @@ msgstr ""
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/xml/snippets.xml:0
-#: code:addons/web_editor/static/src/xml/snippets.xml:0
 #, python-format
 msgid "Title"
 msgstr "عنوان"
@@ -3355,7 +3283,6 @@ msgstr "تغییر حالت بولد"
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/xml/editor.xml:0
-#: code:addons/web_editor/static/src/xml/editor.xml:0
 #, python-format
 msgid "Toggle checklist"
 msgstr "فعال کردن لیست بازبینی"
@@ -3377,7 +3304,6 @@ msgstr "ایتالیک را تغییر دهید"
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/xml/editor.xml:0
-#: code:addons/web_editor/static/src/xml/editor.xml:0
 #, python-format
 msgid "Toggle ordered list"
 msgstr "تغییر فهرست مرتب شده"
@@ -3398,7 +3324,6 @@ msgstr "تغییر زیرخط"
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/xml/editor.xml:0
 #: code:addons/web_editor/static/src/xml/editor.xml:0
 #, python-format
 msgid "Toggle unordered list"
@@ -3438,7 +3363,6 @@ msgstr "تبدیل تصویر (برای بازنشانی تغییرات، دو �
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/xml/backend.xml:0
 #: code:addons/web_editor/static/src/xml/backend.xml:0
 #, python-format
 msgid "Translate"
@@ -3604,8 +3528,13 @@ msgstr "تست مبدل ویرایشگر وب"
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
-#: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
+#: code:addons/web_editor/static/src/js/editor/snippets.options.js:0
+#, python-format
+msgid "WebP compression not supported on this browser"
+msgstr ""
+
+#. module: web_editor
+#. odoo-javascript
 #: code:addons/web_editor/static/src/js/editor/odoo-editor/src/OdooEditor.js:0
 #: code:addons/web_editor/static/src/js/wysiwyg/wysiwyg.js:0
 #, python-format
@@ -3667,7 +3596,6 @@ msgstr "بله"
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/components/media_dialog/image_selector.js:0
-#: code:addons/web_editor/static/src/components/media_dialog/image_selector.js:0
 #, python-format
 msgid ""
 "You can not replace a field by this image. If you want to use this image, "
@@ -3690,8 +3618,8 @@ msgstr "شما نمی توانید از این تصویر در یک فیلد ا�
 #, python-format
 msgid "You can still access the block options but it might be ineffective."
 msgstr ""
-"شما همچنان می‌توانید به گزینه‌های بلوک دسترسی داشته باشید اما ممکن است "
-"بی‌اثر باشد."
+"شما همچنان می‌توانید به گزینه‌های بلوک دسترسی داشته باشید اما ممکن است بی‌اثر "
+"باشد."
 
 #. module: web_editor
 #. odoo-javascript
@@ -3710,8 +3638,7 @@ msgid ""
 "You have reached the maximum number of requests for this service. Try again "
 "later."
 msgstr ""
-"شما به حداکثر تعداد درخواست‌ها برای این خدمت رسیده‌اید. بعداً دوباره تلاش "
-"کنید."
+"شما به حداکثر تعداد درخواست‌ها برای این خدمت رسیده‌اید. بعداً دوباره تلاش کنید."
 
 #. module: web_editor
 #. odoo-javascript
@@ -3777,13 +3704,6 @@ msgstr "افزودن"
 
 #. module: web_editor
 #. odoo-javascript
-#: code:addons/web_editor/static/src/components/media_dialog/file_selector.xml:0
-#, python-format
-msgid "all"
-msgstr "همه"
-
-#. module: web_editor
-#. odoo-javascript
 #: code:addons/web_editor/static/src/js/wysiwyg/widgets/chatgpt_alternatives_dialog.xml:0
 #, python-format
 msgid "alternatives..."
@@ -3807,44 +3727,9 @@ msgid "darken"
 msgstr "تیره کن"
 
 #. module: web_editor
-#. odoo-javascript
-#: code:addons/web_editor/static/src/components/media_dialog/file_selector.xml:0
-#, python-format
-msgid "database"
-msgstr ""
-
-#. module: web_editor
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options_image_optimization_widgets
 msgid "exclusion"
 msgstr "حذف"
-
-#. module: web_editor
-#. odoo-javascript
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
-#, python-format
-msgid "fill"
-msgstr ""
-
-#. module: web_editor
-#. odoo-javascript
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
-#, python-format
-msgid "fill,rounded-circle"
-msgstr ""
-
-#. module: web_editor
-#. odoo-javascript
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
-#, python-format
-msgid "flat"
-msgstr ""
-
-#. module: web_editor
-#. odoo-javascript
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
-#, python-format
-msgid "lg"
-msgstr ""
 
 #. module: web_editor
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options_image_optimization_widgets
@@ -3852,30 +3737,9 @@ msgid "lighten"
 msgstr "روشن‌تر کردن"
 
 #. module: web_editor
-#. odoo-javascript
-#: code:addons/web_editor/static/src/components/media_dialog/file_selector.xml:0
-#, python-format
-msgid "media-library"
-msgstr ""
-
-#. module: web_editor
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options_image_optimization_widgets
 msgid "multiply"
 msgstr "ضرب کنید"
-
-#. module: web_editor
-#. odoo-javascript
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
-#, python-format
-msgid "outline"
-msgstr ""
-
-#. module: web_editor
-#. odoo-javascript
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
-#, python-format
-msgid "outline,rounded-circle"
-msgstr ""
 
 #. module: web_editor
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options_image_optimization_widgets
@@ -3890,23 +3754,9 @@ msgid "px"
 msgstr "px"
 
 #. module: web_editor
-#. odoo-javascript
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
-#, python-format
-msgid "rounded-circle"
-msgstr ""
-
-#. module: web_editor
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options_image_optimization_widgets
 msgid "screen"
 msgstr "صفحه نمایش"
-
-#. module: web_editor
-#. odoo-javascript
-#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
-#, python-format
-msgid "sm"
-msgstr ""
 
 #. module: web_editor
 #. odoo-javascript

@@ -19,6 +19,7 @@ class AccountMove(models.Model):
         compute='_compute_l10n_it_document_type',
         store=True,
         readonly=False,
+        copy=False,
     )
 
     def _auto_init(self):
@@ -63,10 +64,17 @@ class AccountMove(models.Model):
 
             move.l10n_it_document_type = document_type.get(move._l10n_it_edi_get_document_type())
 
+    def _l10n_it_edi_get_document_type(self):
+        # EXTENDS 'l10n_it_edi'
+        self.ensure_one()
+
+        if self.l10n_it_document_type:
+            return self.l10n_it_document_type.code
+        return super()._l10n_it_edi_get_document_type()
+
     def _l10n_it_edi_get_values(self, pdf_values=None):
         # EXTENDS 'l10n_it_edi'
         res = super()._l10n_it_edi_get_values(pdf_values)
-        res['document_type'] = self.l10n_it_document_type.code
         res['payment_method'] = self.l10n_it_payment_method
 
         return res
@@ -77,9 +85,10 @@ class AccountMove(models.Model):
             But when reversing the move, the document type of the original move is copied and so it isn't recomputed.
         """
         # EXTENDS account
+        default_values_list = default_values_list or [{}] * len(self)
+        for default_values in default_values_list:
+            default_values.update({'l10n_it_document_type': False})
         reverse_moves = super()._reverse_moves(default_values_list, cancel)
-        for move in reverse_moves:
-            move.l10n_it_document_type = False
         return reverse_moves
 
     def _l10n_it_edi_import_invoice(self, invoice, data, is_new):

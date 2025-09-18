@@ -208,7 +208,7 @@ class Task(models.Model):
     working_days_open = fields.Float(compute='_compute_elapsed', string='Working Days to Assign', store=True, group_operator="avg")
     working_days_close = fields.Float(compute='_compute_elapsed', string='Working Days to Close', store=True, group_operator="avg")
     # customer portal: include comment and (incoming/outgoing) emails in communication history
-    website_message_ids = fields.One2many(domain=lambda self: [('model', '=', self._name), ('message_type', 'in', ['email', 'comment', 'email_outgoing'])])
+    website_message_ids = fields.One2many(domain=lambda self: [('model', '=', self._name), ('message_type', 'in', ['email', 'comment', 'email_outgoing', 'auto_comment'])])
     allow_milestones = fields.Boolean(related='project_id.allow_milestones')
     milestone_id = fields.Many2one(
         'project.milestone',
@@ -297,7 +297,7 @@ class Task(models.Model):
         for task in self:
             task.analytic_account_id = task.project_id.analytic_account_id
 
-    @api.depends('stage_id', 'depend_on_ids.state', 'project_id.allow_task_dependencies')
+    @api.depends('stage_id', 'depend_on_ids.state')
     def _compute_state(self):
         for task in self:
             dependent_open_tasks = []
@@ -386,7 +386,7 @@ class Task(models.Model):
     def message_subscribe(self, partner_ids=None, subtype_ids=None):
         """ Set task notification based on project notification preference if user follow the project"""
         if not subtype_ids:
-            project_followers = self.project_id.message_follower_ids.filtered(lambda f: f.partner_id.id in partner_ids)
+            project_followers = self.project_id.sudo().message_follower_ids.filtered(lambda f: f.partner_id.id in partner_ids)
             for project_follower in project_followers:
                 project_subtypes = project_follower.subtype_ids
                 task_subtypes = (project_subtypes.mapped('parent_id') | project_subtypes.filtered(lambda sub: sub.internal or sub.default)).ids if project_subtypes else None
@@ -782,6 +782,21 @@ class Task(models.Model):
 
         return vals
 
+    def _ensure_fields_write(self, vals, check_group_user=True, defaults=False):
+        # First check if the fields are accessible
+        self._ensure_fields_are_accessible(vals.keys(), operation='write', check_group_user=check_group_user)
+
+        if defaults:
+            vals = {
+                **{key[8:]: value for key, value in self.env.context.items() if key.startswith("default_")},
+                **vals
+            }
+
+        for fname, value in vals.items():
+            field = self._fields[fname]
+            if field.type == 'many2one':
+                self.env[field.comodel_name].browse(value).check_access_rule('read')
+
     def _ensure_fields_are_accessible(self, fields, operation='read', check_group_user=True):
         """" ensure all fields are accessible by the current user
 
@@ -916,7 +931,7 @@ class Task(models.Model):
             if not vals.get('name') and vals.get('display_name'):
                 vals['name'] = vals['display_name']
             if is_portal_user:
-                self._ensure_fields_are_accessible(vals.keys(), operation='write', check_group_user=False)
+                self._ensure_fields_write(vals, check_group_user=False, defaults=True)
 
             if project_id:
                 # set the project => "I want to display the task in the project"
@@ -998,7 +1013,7 @@ class Task(models.Model):
         portal_can_write = False
         if self.env.user.has_group('base.group_portal') and not self.env.su:
             # Check if all fields in vals are in SELF_WRITABLE_FIELDS
-            self._ensure_fields_are_accessible(vals.keys(), operation='write', check_group_user=False)
+            self._ensure_fields_write(vals, check_group_user=False, defaults=False)
             self.check_access_rights('write')
             self.check_access_rule('write')
             portal_can_write = True

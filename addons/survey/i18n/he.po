@@ -13,7 +13,6 @@
 # Roy Sayag, 2023
 # שהאב חוסיין <shhab89@gmail.com>, 2023
 # Yihya Hugirat <hugirat@gmail.com>, 2023
-# Martin Trigaux, 2023
 # דודי מלכה <Dudimalka6@gmail.com>, 2023
 # Orel Nahmany, 2024
 # ZVI BLONDER <ZVIBLONDER@gmail.com>, 2024
@@ -21,13 +20,14 @@
 # yael terner, 2024
 # tomerlayline, 2024
 # Lilach Gilliam <lilach.gilliam@gmail.com>, 2025
+# Martin Trigaux, 2025
 # or balmas, 2025
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-13 10:26+0000\n"
+"POT-Creation-Date: 2025-05-07 20:36+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
 "Last-Translator: or balmas, 2025\n"
 "Language-Team: Hebrew (https://app.transifex.com/odoo/teams/41243/he/)\n"
@@ -1185,7 +1185,7 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_invite__body_has_template_value
 msgid "Body content is the same as the template"
-msgstr ""
+msgstr "תוכן הגוף זהה לתבנית."
 
 #. module: survey
 #: model:survey.question.answer,value:survey.survey_demo_quiz_p3_q4_sug4
@@ -2103,6 +2103,11 @@ msgstr "תרשים"
 #: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_search
 msgid "Group By"
 msgstr "קבץ לפי"
+
+#. module: survey
+#: model:ir.model,name:survey.model_ir_http
+msgid "HTTP Routing"
+msgstr "ניתוב HTTP"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_invite__existing_mode
@@ -3653,7 +3658,7 @@ msgstr "מוצרים"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.user_input_session_manage_content
 msgid "Progress bar"
-msgstr ""
+msgstr "בר התקדמות"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question_answer__question_id

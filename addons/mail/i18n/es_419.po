@@ -5,16 +5,15 @@
 # Translators:
 # Iran Villalobos López, 2023
 # Lucia Pacheco, 2024
-# Martin Trigaux, 2024
-# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2024
 # Wil Odoo, 2024
+# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2025
 # Fernanda Alvarez, 2025
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-10 10:33+0000\n"
+"POT-Creation-Date: 2025-07-11 01:02+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
 "Last-Translator: Fernanda Alvarez, 2025\n"
 "Language-Team: Spanish (Latin America) (https://app.transifex.com/odoo/teams/41243/es_419/)\n"
@@ -399,8 +398,8 @@ msgid ""
 "<b invisible=\"not no_record\" class=\"text-warning\">No record for this "
 "model</b>"
 msgstr ""
-"<b invisible=\"not no_record\" class=\"text-warning\">Sin registro para este"
-" modelo</b>"
+"<b invisible=\"not no_record\" class=\"text-warning\">No hay registros para "
+"este modelo</b>"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.view_document_file_kanban
@@ -469,15 +468,15 @@ msgid ""
 msgstr ""
 "<span invisible=\"mail_post_method != 'email'\">\n"
 "                                El mensaje se enviará como un correo electrónico a los destinatarios\n"
-"                                de la plantilla y no aparecerá en el historial de mensajería.\n"
+"                                de la plantilla y no aparecerá en el historial de mensajes.\n"
 "                            </span>\n"
 "                            <span invisible=\"mail_post_method != 'note'\">\n"
-"                                El mensaje se publicará como una nota interna visible para los usuarios internos\n"
-"                                en el historial de mensajería.\n"
+"                                El mensaje se publicará como una nota interna visible para los usuarios\n"
+"                                internos en el historial de mensajes.\n"
 "                            </span>\n"
 "                            <span invisible=\"mail_post_method != 'comment'\">\n"
-"                                El mensaje se publicará como mensaje en el registro,\n"
-"                                con lo cual se notificará a todos los seguidores. También aparecerá en el historial de mensajería.\n"
+"                                El mensaje se publicará como mensaje en el registro\n"
+"                                y notificará a todos los seguidores. Aparecerá en el historial de mensajes.\n"
 "                            </span>"
 
 #. module: mail
@@ -2050,8 +2049,9 @@ msgid ""
 "Chat is private and unique between 2 persons. Group is private among invited"
 " persons. Channel can be freely joined (depending on its configuration)."
 msgstr ""
-"El chat es privado y único entre 2 personas. El grupo es privado entre las "
-"personas invitadas, pero cualquiera puede unirse (según la configuración)."
+"Un chat es privado y único entre 2 personas. Un grupo es privado entre las "
+"personas invitadas. Un canal es abierto y cualquier persona puede unirse "
+"(depende de la configuración)."
 
 #. module: mail
 #. odoo-javascript
@@ -3344,12 +3344,12 @@ msgstr "Dirección de correo electrónico"
 #: model:ir.model.fields,field_description:mail.field_mail_alias_mixin__alias_email
 #: model:ir.model.fields,field_description:mail.field_mail_alias_mixin_optional__alias_email
 msgid "Email Alias"
-msgstr "Seudónimo de correo electrónico"
+msgstr "Alias de correo"
 
 #. module: mail
 #: model:ir.model,name:mail.model_mail_alias
 msgid "Email Aliases"
-msgstr "Seudónimos de correos"
+msgstr "Seudónimos de correo"
 
 #. module: mail
 #: model:ir.model,name:mail.model_mail_alias_mixin
@@ -4592,8 +4592,7 @@ msgstr "Si se requiere SSL."
 #: model:ir.model.fields,help:mail.field_res_partner__message_needaction
 #: model:ir.model.fields,help:mail.field_res_users__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr ""
-"Si se encuentra seleccionado, hay nuevos mensajes que requieren su atención."
+msgstr "Si está seleccionado, hay nuevos mensajes que requieren tu atención."
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_discuss_channel__message_has_error
@@ -4605,7 +4604,7 @@ msgstr ""
 #: model:ir.model.fields,help:mail.field_res_partner__message_has_error
 #: model:ir.model.fields,help:mail.field_res_users__message_has_error
 msgid "If checked, some messages have a delivery error."
-msgstr "Si se encuentra seleccionado, algunos mensajes tienen error de envío."
+msgstr "Si está seleccionado, algunos mensajes tienen error de envío."
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.email_template_form
@@ -5239,7 +5238,7 @@ msgstr "Guardar archivos adjuntos"
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_activity_type__keep_done
 msgid "Keep Done"
-msgstr "Mantener como Hecho"
+msgstr "Mantener actividades hechas"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_compose_message__auto_delete_keep_log
@@ -7311,7 +7310,7 @@ msgstr "Contraseña"
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.res_config_settings_view_form
 msgid "Paste your API key"
-msgstr "Pegue aquí su clave API"
+msgstr "Pega tu clave API"
 
 #. module: mail
 #. odoo-javascript
@@ -8490,21 +8489,21 @@ msgstr "Buscar: %s"
 #: code:addons/mail/models/res_users.py:0
 #, python-format
 msgid "Security Update: Email Changed"
-msgstr "Actualización de seguridad: se cambió el correo electrónico"
+msgstr "Actualización de seguridad: Cambio de correo electrónico"
 
 #. module: mail
 #. odoo-python
 #: code:addons/mail/models/res_users.py:0
 #, python-format
 msgid "Security Update: Login Changed"
-msgstr "Actualización de seguridad: cambió el inicio de sesión"
+msgstr "Actualización de seguridad: Cambio de inicio de sesión"
 
 #. module: mail
 #. odoo-python
 #: code:addons/mail/models/res_users.py:0
 #, python-format
 msgid "Security Update: Password Changed"
-msgstr "Actualización de seguridad: se cambió la contraseña"
+msgstr "Actualización de seguridad: Cambio de contraseña"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_resend_message_view_form
@@ -9520,8 +9519,8 @@ msgid ""
 "The name of the email alias, e.g. 'jobs' if you want to catch emails for "
 "<jobs@example.odoo.com>"
 msgstr ""
-"El nombre del seudónimo de correo electrónico. Por ejemplo, \"trabajos\" si "
-"desea recibir correos electrónicos en <trabajos@ejemplo.odoo.com>."
+"El nombre del seudónimo de correo, por ejemplo, \"vacantes\" para recibir "
+"mensajes en <vacantes@ejemplo.odoo.com>."
 
 #. module: mail
 #. odoo-python
@@ -10908,6 +10907,16 @@ msgstr "Puede ignorar este mensaje de forma segura"
 
 #. module: mail
 #. odoo-python
+#: code:addons/mail/models/mail_activity_type.py:0
+#, python-format
+msgid ""
+"You cannot delete %(activity_names)s as it is required in various apps."
+msgstr ""
+"No puedes eliminar %(activity_names)s, ya que se utiliza en otras "
+"aplicaciones."
+
+#. module: mail
+#. odoo-python
 #: code:addons/mail/models/discuss/discuss_channel.py:0
 #, python-format
 msgid ""
@@ -10916,6 +10925,17 @@ msgid ""
 msgstr ""
 "No puede eliminar estos grupos, el grupo \"Toda la empresa\" es necesario "
 "para otros módulos."
+
+#. module: mail
+#. odoo-python
+#: code:addons/mail/models/mail_activity_type.py:0
+#, python-format
+msgid ""
+"You cannot modify %(activities_names)s target model as they are are required"
+" in various apps."
+msgstr ""
+"No puedes modificar el modelo de destino de%(activities_names)s, ya que se "
+"utiliza en otras aplicaciones."
 
 #. module: mail
 #. odoo-python
@@ -10965,7 +10985,7 @@ msgstr "Le asignaron %s"
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.message_user_assigned
 msgid "You have been assigned to the"
-msgstr "Le asignaron al"
+msgstr "Le asignaron:"
 
 #. module: mail
 #. odoo-javascript
@@ -11095,7 +11115,7 @@ msgstr "Su navegador no es compatible con webRTC."
 #: code:addons/mail/static/src/discuss/core/public/welcome_page.xml:0
 #, python-format
 msgid "Your name"
-msgstr "Su nombre"
+msgstr "Tu nombre"
 
 #. module: mail
 #. odoo-javascript
@@ -11304,8 +11324,8 @@ msgstr "Por ejemplo, \"Correo de bienvenida\""
 #: model_terms:ir.ui.view,arch_db:mail.mail_compose_message_view_form_template_save
 msgid "e.g. \"Welcome to MyCompany\" or \"Nice to meet you, {{ object.name }}\""
 msgstr ""
-"por ejemplo:  \"Bienvenido a MiEmpresa\" o \"Gusto en conocerlo, {{ "
-"object.name }}\""
+"Por ejemplo, \"Le damos la bienvenida a MiEmpresa\" o \"Gusto en conocerle, "
+"{{ object.name }}\""
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_alias_domain_view_form
@@ -11739,13 +11759,6 @@ msgstr "su seudónimo"
 #: model_terms:ir.ui.view,arch_db:mail.email_template_form
 msgid "{{ object.partner_id.lang }}"
 msgstr "{{ object.partner_id.lang }}"
-
-#. module: mail
-#. odoo-javascript
-#: code:addons/mail/static/src/core/common/autoresize_input.xml:0
-#, python-format
-msgid "{{ props.placeholder }}"
-msgstr "{{ props.placeholder }}"
 
 #. module: mail
 #. odoo-python
